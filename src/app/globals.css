@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+    --foreground: #C1CAD8; 
+    --green: #30CC94; 
+    --dark-paragraph: #C1CAD8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+   --color-green: var(--green); 
+   --color-dark-paragraph: var(--dark-paragraph);
+   --font-sans: 'Svatopluk', sans-serif;
+   --font-jetbrainsmono: 'JetBrains-Mono', sans-serif; 
+   
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617;
+    --foreground: #C1CAD8;  
+  }
+}
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-Black.woff2') format('woff2'),
+        url('/fonts/Svatopluk-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-BlackItalic.woff2') format('woff2'),
+        url('/fonts/Svatopluk-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-Bold.woff2') format('woff2'),
+        url('/fonts/Svatopluk-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Svatopluk-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-Light.woff2') format('woff2'),
+        url('/fonts/Svatopluk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-LightItalic.woff2') format('woff2'),
+        url('/fonts/Svatopluk-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-Medium.woff2') format('woff2'),
+        url('/fonts/Svatopluk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-MediumItalic.woff2') format('woff2'),
+        url('/fonts/Svatopluk-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-Regular.woff2') format('woff2'),
+        url('/fonts/Svatopluk-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-RegularItalic.woff2') format('woff2'),
+        url('/fonts/Svatopluk-RegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-SemiBold.woff2') format('woff2'),
+        url('/fonts/Svatopluk-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Svatopluk';
+    src: url('/fonts/Svatopluk-SemiBoldItalic.woff2') format('woff2'),
+        url('/fonts/Svatopluk-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'JetBrains-Mono';
+    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+        url('/fonts/JetBrainsMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Svatopluk', sans-serif;
+}
+.banner-section:before {
+    content: "";
+    filter: blur(60px);
+    background: #0596691a;
+    border-radius: 9999px;
+    max-width: 920px;
+    height: 411px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    z-index: -1;
+    width: 90%; 
+}
+.banner-graph:before {
+    content: "";
+    position: absolute;
+    border-radius: 14.686px;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0 0 4.589px 1.836px rgba(16, 185, 129, 0.20), 0 0 36.714px 0 rgba(16, 185, 129, 0.12), 0 0.918px 0 0.918px rgba(255, 255, 255, 0.04) inset;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+.approch-section {
+    background-image: url("../assets/images/approch-section.jpg");
+}
+.document-intelligence{
+     background-image: url("../assets/images/document-intelligence.jpg");
+}
+.overlay-blure-footer {
+    border-radius: 9999px;
+    background: rgba(5, 150, 105, 0.15); 
+    filter: blur(65px);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+        pointer-events: none;
+}
+
+.overlay-shadow-footer {
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.20), 0 0 40px 0 rgba(16, 185, 129, 0.12), 0 1px 0 1px rgba(255, 255, 255, 0.04) inset;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+        pointer-events: none;
+}
+.avobe-footer {
+    backdrop-filter: blur(12px);
+}
