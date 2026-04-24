@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div className="space-y-3">
+          <div className="space-y-5">
              <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">Company</h4>
             <ul className="space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-base">
               <li>
