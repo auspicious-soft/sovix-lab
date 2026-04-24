@@ -12,6 +12,7 @@ import {
   DataCannotIcon,
   FragmentedIcon,
   InternalQAIcon,
+  LessIcon,
   ThirdPartyIcon,
   TickIcon,
   UnstructuredEvidenceIcon,
@@ -64,8 +65,8 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <h2 className="text-[16px] md:text-[20px]  font-bold leading-8 text-[#F8FAFC]">
-                    60s
+                  <h2 className="text-[16px] md:text-[20px]  font-bold leading-8 text-[#F8FAFC] flex items-center justify-center align-center">
+                    <LessIcon /> 60s
                   </h2>
                   <p className="text-xs font-normal font-jetbrainsmono uppercase tracking-[1px] text-[#64748B] leading-[17px] max-w-[100px] md:max-w-full">
                     P95 DOCUMENT PROCESSING

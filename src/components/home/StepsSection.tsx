@@ -50,7 +50,7 @@ const StepsSection = () => {
             <div className="">
               <span
                 className={`
-            inline-block px-3.5 py-1.5 bg-[#F4F5F7] border border-[#EBEBEB] rounded-[6px] font-jetbrainsmono tracking-[1px] text-xs text-[#020617]
+            inline-block px-3.5 py-1.5 pt-2 bg-[#F4F5F7] border border-[#EBEBEB] rounded-[6px] font-jetbrainsmono tracking-[1px] text-xs text-[#020617]
             ${isHighlighted ? "!bg-[#020617] !text-white !border-[#020617]" : ""}
           `}
               >

@@ -107,3 +107,8 @@ export const Emailcon = () => (
 </svg>
 
 );
+export const LessIcon = () => (
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.32 9.04L0 5.52V3.52L9.32 0V2.16L2.74 4.52L9.32 6.88V9.04Z" fill="#F8FAFC"/>
+</svg>
+);
