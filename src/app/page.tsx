@@ -2,6 +2,7 @@ import Button from "@/components/ui/Button";
 import BannerGraph from "@/assets/images/banner-graph.svg";
 import SovixCore from "@/assets/images/sovix-core.svg";
 import DocumentIntelligence from "@/assets/images/document-intelligence.svg";
+import AIGuidance from "@/assets/images/AI-guidance.svg";
 import Image from "next/image";
 import FeatureCard from "@/components/home/FeatureCard";
 import {
@@ -423,10 +424,10 @@ export default function Home() {
               <WorkflowAutomationIcon />
             </SurfacesCard>
           </div>
-          <div className="group w-full grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center rounded-2xl overflow-hidden border border-[#F5F5F5] transition-all duration-500 ease-out  hover:border-[#384965]">
-            <div className="bg-[#10B981]/10 flex justify-center items-center px-4 py-6 md:p-6">
+          <div className=" group w-full grid grid-cols-1 lg:grid-cols-[1fr_1fr] items-center rounded-2xl overflow-hidden border border-[#F5F5F5] transition-all duration-500 ease-out  hover:border-[#384965]">
+            <div className="bg-[#10B981]/10 flex justify-center items-center px-4 py-6 md:p-6 lg:min-h-[314px]">
               <Image
-                src={DocumentIntelligence}
+                src={AIGuidance}
                 alt="Document Intelligence"
                 className=" relative transition-all duration-500 ease-out group-hover:translate-x-10"
               />

@@ -97,13 +97,13 @@ export const WorkflowAutomationIcon = () => (
 );
 export const CallIcon = () => (
 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.5886 11.0265L10.5 11.625C8.41372 10.5779 7.12499 9.375 6.37499 7.5L6.95246 4.40243L5.86088 1.5H3.04769C2.20203 1.5 1.5361 2.19883 1.6624 3.03501C1.97771 5.1225 2.90739 8.90737 5.62499 11.625C8.47889 14.4789 12.5893 15.7173 14.8515 16.2095C15.7251 16.3996 16.5 15.7181 16.5 14.8241V12.1359L13.5886 11.0265Z" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.5886 11.0265L10.5 11.625C8.41372 10.5779 7.12499 9.375 6.37499 7.5L6.95246 4.40243L5.86088 1.5H3.04769C2.20203 1.5 1.5361 2.19883 1.6624 3.03501C1.97771 5.1225 2.90739 8.90737 5.62499 11.625C8.47889 14.4789 12.5893 15.7173 14.8515 16.2095C15.7251 16.3996 16.5 15.7181 16.5 14.8241V12.1359L13.5886 11.0265Z" stroke="white" strokeWidth="0.8" strokeLinecap="round" stroke-linejoin="round"/>
 </svg>
 ); 
 export const Emailcon = () => (
 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.25 6.75L9 9.375L12.75 6.75" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1.5 12.75V5.25C1.5 4.42157 2.17157 3.75 3 3.75H15C15.8284 3.75 16.5 4.42157 16.5 5.25V12.75C16.5 13.5784 15.8284 14.25 15 14.25H3C2.17157 14.25 1.5 13.5784 1.5 12.75Z" stroke="white" stroke-width="0.8"/>
+<path d="M5.25 6.75L9 9.375L12.75 6.75" stroke="white" strokeWidth="0.8" strokeLinecap="round" stroke-linejoin="round"/>
+<path d="M1.5 12.75V5.25C1.5 4.42157 2.17157 3.75 3 3.75H15C15.8284 3.75 16.5 4.42157 16.5 5.25V12.75C16.5 13.5784 15.8284 14.25 15 14.25H3C2.17157 14.25 1.5 13.5784 1.5 12.75Z" stroke="white" strokeWidth="0.8"/>
 </svg>
 
 );
