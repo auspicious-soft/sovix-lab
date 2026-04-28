@@ -47,30 +47,63 @@ export default function CardStackSlider() {
         </h3>
         <div className="flex justify-between items-center gap-3 md:gap-5">
           <button
+          className="cursor-pointer"
             onClick={() =>
               setActive((prev) => (prev - 1 + slides.length) % slides.length)
             }
-            
           >
-           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.25 4.5L6.75 9L11.25 13.5" stroke="white" strokeWidth="1.05" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.25 4.5L6.75 9L11.25 13.5"
+                stroke="white"
+                strokeWidth="1.05"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
 
-          <span className="text-xs flex justify-between items-center gap-3 md:gap-5 font-semibold">
-            {active + 1} <svg width="2" height="2" viewBox="0 0 2 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.854012 1.69396C0.182012 1.69396 1.17421e-05 1.56796 1.17421e-05 0.839955C1.17421e-05 0.111955 0.182012 -4.50462e-05 0.854012 -4.50462e-05C1.51201 -4.50462e-05 1.70801 0.111955 1.70801 0.839955C1.70801 1.56796 1.51201 1.69396 0.854012 1.69396Z" fill="white"/>
-</svg>
- {slides.length}
+          <span className="text-xs cursor-pointer flex justify-between items-center gap-3 md:gap-5 font-semibold">
+            {active + 1}{" "}
+            <svg
+              width="2"
+              height="2"
+              viewBox="0 0 2 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.854012 1.69396C0.182012 1.69396 1.17421e-05 1.56796 1.17421e-05 0.839955C1.17421e-05 0.111955 0.182012 -4.50462e-05 0.854012 -4.50462e-05C1.51201 -4.50462e-05 1.70801 0.111955 1.70801 0.839955C1.70801 1.56796 1.51201 1.69396 0.854012 1.69396Z"
+                fill="white"
+              />
+            </svg>
+            {slides.length}
           </span>
           <button
+          className="cursor-pointer"
             onClick={() => setActive((prev) => (prev + 1) % slides.length)}
-            
           >
-           <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
-  <path d="M0.524902 9.5249L5.0249 5.0249L0.524902 0.524902" stroke="white" stroke-width="1.05" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="6"
+              height="11"
+              viewBox="0 0 6 11"
+              fill="none"
+            >
+              <path
+                d="M0.524902 9.5249L5.0249 5.0249L0.524902 0.524902"
+                stroke="white"
+                stroke-width="1.05"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
         </div>
       </div>
