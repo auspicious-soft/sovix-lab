@@ -112,3 +112,80 @@ export const LessIcon = () => (
 <path d="M9.32 9.04L0 5.52V3.52L9.32 0V2.16L2.74 4.52L9.32 6.88V9.04Z" fill="#F8FAFC"/>
 </svg>
 );
+export const Surface1Icon = () => (
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M21.3334 13.3333H16.0001C15.6465 13.3333 15.3073 13.4738 15.0573 13.7238C14.8072 13.9739 14.6667 14.313 14.6667 14.6666V25.3333C14.6667 25.6869 14.8072 26.0261 15.0573 26.2761C15.3073 26.5262 15.6465 26.6666 16.0001 26.6666H24.0001C24.3537 26.6666 24.6928 26.5262 24.9429 26.2761C25.1929 26.0261 25.3334 25.6869 25.3334 25.3333V17.3333L21.3334 13.3333Z" stroke="#00E5A0" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M21.3333 13.3333V17.3333H25.3333" stroke="#00E5A0" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M22.6666 20.6667H17.3333" stroke="#00E5A0" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M22.6666 23.3333H17.3333" stroke="#00E5A0" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+);
+export const Surface2Icon = () => (
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M23.3335 23.3333L26.0002 25.9999" stroke="#00E5A0" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M14 19.3333C14 22.2789 16.3878 24.6667 19.3333 24.6667C20.8087 24.6667 22.1441 24.0677 23.1096 23.0995C24.0718 22.1348 24.6667 20.8035 24.6667 19.3333C24.6667 16.3878 22.2789 14 19.3333 14C16.3878 14 14 16.3878 14 19.3333Z" stroke="#00E5A0" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+);
+export const Surface3Icon = () => (
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M26.6668 20H24.0002L22.0002 26L18.0002 14L16.0002 20H13.3335" stroke="#00E5A0" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+);
+export const Surface4Icon = () => (
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M20.0002 13.3333L22.0602 17.5066L26.6668 18.1799L23.3335 21.4266L24.1202 26.0133L20.0002 23.8466L15.8802 26.0133L16.6668 21.4266L13.3335 18.1799L17.9402 17.5066L20.0002 13.3333Z" stroke="#00E5A0" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+);
+export const Compliance1Icon = () => (
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M19.9998 26.6666C19.9998 26.6666 25.3332 23.9999 25.3332 19.9999V15.3333L19.9998 13.3333L14.6665 15.3333V19.9999C14.6665 23.9999 19.9998 26.6666 19.9998 26.6666Z" stroke="#34D399" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+);
+export const Compliance2Icon = () => (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M24.6667 19.3333H15.3333C14.597 19.3333 14 19.9302 14 20.6666V25.3333C14 26.0696 14.597 26.6666 15.3333 26.6666H24.6667C25.403 26.6666 26 26.0696 26 25.3333V20.6666C26 19.9302 25.403 19.3333 24.6667 19.3333Z" stroke="#34D399" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M16.6665 19.3333V16.6666C16.6665 15.7825 17.0177 14.9347 17.6428 14.3096C18.2679 13.6844 19.1158 13.3333 19.9998 13.3333C20.8839 13.3333 21.7317 13.6844 22.3569 14.3096C22.982 14.9347 23.3332 15.7825 23.3332 16.6666V19.3333" stroke="#34D399" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+);
+export const Compliance3Icon = () => (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M25.3335 16.6667H14.6668C14.3132 16.6667 13.9741 16.8072 13.724 17.0573C13.474 17.3073 13.3335 17.6465 13.3335 18.0001V22.0001C13.3335 22.3537 13.474 22.6928 13.724 22.9429C13.9741 23.1929 14.3132 23.3334 14.6668 23.3334H25.3335C25.6871 23.3334 26.0263 23.1929 26.2763 22.9429C26.5264 22.6928 26.6668 22.3537 26.6668 22.0001V18.0001C26.6668 17.6465 26.5264 17.3073 26.2763 17.0573C26.0263 16.8072 25.6871 16.6667 25.3335 16.6667Z" stroke="#34D399" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M22.6668 26V15.3333C22.6668 14.9797 22.5264 14.6406 22.2763 14.3905C22.0263 14.1405 21.6871 14 21.3335 14H18.6668C18.3132 14 17.9741 14.1405 17.724 14.3905C17.474 14.6406 17.3335 14.9797 17.3335 15.3333V26" stroke="#34D399" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+);
+export const Compliance4Icon = () => (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M23.6666 24.6666H17.9999C17.1345 24.6664 16.2862 24.4255 15.5498 23.9709C14.8134 23.5163 14.2179 22.8659 13.8299 22.0923C13.4418 21.3188 13.2765 20.4526 13.3525 19.5905C13.4284 18.7284 13.7426 17.9044 14.2598 17.2106C14.7771 16.5168 15.4771 15.9804 16.2817 15.6616C17.0862 15.3427 17.9636 15.2538 18.8157 15.4049C19.6678 15.556 20.4612 15.941 21.1071 16.517C21.753 17.093 22.226 17.8372 22.4733 18.6666H23.6666C24.4623 18.6666 25.2253 18.9827 25.7879 19.5453C26.3505 20.1079 26.6666 20.8709 26.6666 21.6666C26.6666 22.4622 26.3505 23.2253 25.7879 23.7879C25.2253 24.3505 24.4623 24.6666 23.6666 24.6666Z" stroke="#34D399" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+);
+export const Compliance5Icon = () => (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" fill="#020617"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#1E293B"/>
+<path d="M25.3332 20.6666C25.3332 24 22.9998 25.6666 20.2265 26.6333C20.0813 26.6825 19.9235 26.6802 19.7798 26.6266C16.9998 25.6666 14.6665 24 14.6665 20.6666V16C14.6665 15.8232 14.7367 15.6536 14.8618 15.5286C14.9868 15.4035 15.1564 15.3333 15.3332 15.3333C16.6665 15.3333 18.3332 14.5333 19.4932 13.52C19.6344 13.3993 19.8141 13.333 19.9998 13.333C20.1856 13.333 20.3653 13.3993 20.5065 13.52C21.6732 14.54 23.3332 15.3333 24.6665 15.3333C24.8433 15.3333 25.0129 15.4035 25.1379 15.5286C25.2629 15.6536 25.3332 15.8232 25.3332 16V20.6666Z" stroke="#34D399" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M18 20.0001L19.3333 21.3334L22 18.6667" stroke="#34D399" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+);

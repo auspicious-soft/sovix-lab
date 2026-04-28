@@ -2,206 +2,568 @@
 
 :root {
   --background: #020617;
-    --foreground: #C1CAD8; 
-    --green: #30CC94; 
-    --dark-paragraph: #C1CAD8;
+  --foreground: #c1cad8;
+  --green: #30cc94;
+  --dark-paragraph: #c1cad8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-   --color-green: var(--green); 
-   --color-dark-paragraph: var(--dark-paragraph);
-   --font-sans: 'Svatopluk', sans-serif;
-   --font-jetbrainsmono: 'JetBrains-Mono', sans-serif; 
-   
+  --color-green: var(--green);
+  --color-dark-paragraph: var(--dark-paragraph);
+  --font-sans: "Svatopluk", sans-serif;
+  --font-jetbrainsmono: "JetBrains-Mono", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #020617;
-    --foreground: #C1CAD8;  
+    --foreground: #c1cad8;
   }
 }
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-Black.woff2') format('woff2'),
-        url('/fonts/Svatopluk-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-Black.woff2") format("woff2"),
+    url("/fonts/Svatopluk-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-BlackItalic.woff2') format('woff2'),
-        url('/fonts/Svatopluk-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-BlackItalic.woff2") format("woff2"),
+    url("/fonts/Svatopluk-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-Bold.woff2') format('woff2'),
-        url('/fonts/Svatopluk-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-Bold.woff2") format("woff2"),
+    url("/fonts/Svatopluk-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-BoldItalic.woff2') format('woff2'),
-        url('/fonts/Svatopluk-BoldItalic.woff') format('woff');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-BoldItalic.woff2") format("woff2"),
+    url("/fonts/Svatopluk-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-Light.woff2') format('woff2'),
-        url('/fonts/Svatopluk-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-Light.woff2") format("woff2"),
+    url("/fonts/Svatopluk-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-LightItalic.woff2') format('woff2'),
-        url('/fonts/Svatopluk-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-LightItalic.woff2") format("woff2"),
+    url("/fonts/Svatopluk-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-Medium.woff2') format('woff2'),
-        url('/fonts/Svatopluk-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-Medium.woff2") format("woff2"),
+    url("/fonts/Svatopluk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-MediumItalic.woff2') format('woff2'),
-        url('/fonts/Svatopluk-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-MediumItalic.woff2") format("woff2"),
+    url("/fonts/Svatopluk-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-Regular.woff2') format('woff2'),
-        url('/fonts/Svatopluk-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-Regular.woff2") format("woff2"),
+    url("/fonts/Svatopluk-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-RegularItalic.woff2') format('woff2'),
-        url('/fonts/Svatopluk-RegularItalic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-RegularItalic.woff2") format("woff2"),
+    url("/fonts/Svatopluk-RegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-SemiBold.woff2') format('woff2'),
-        url('/fonts/Svatopluk-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-SemiBold.woff2") format("woff2"),
+    url("/fonts/Svatopluk-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Svatopluk';
-    src: url('/fonts/Svatopluk-SemiBoldItalic.woff2') format('woff2'),
-        url('/fonts/Svatopluk-SemiBoldItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
+  font-family: "Svatopluk";
+  src:
+    url("/fonts/Svatopluk-SemiBoldItalic.woff2") format("woff2"),
+    url("/fonts/Svatopluk-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'JetBrains-Mono';
-    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
-        url('/fonts/JetBrainsMono-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "JetBrains-Mono";
+  src:
+    url("/fonts/JetBrainsMono-Regular.woff2") format("woff2"),
+    url("/fonts/JetBrainsMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-
-
-
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Svatopluk', sans-serif;
+  font-family: "Svatopluk", sans-serif;
 }
 .banner-section:before {
-    content: "";
-    filter: blur(60px);
-    background: #0596691a;
-    border-radius: 9999px;
-    max-width: 920px;
-    height: 411px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    pointer-events: none;
-    z-index: -1;
-    width: 90%; 
+  content: "";
+  filter: blur(60px);
+  background: #0596691a;
+  border-radius: 9999px;
+  max-width: 920px;
+  height: 411px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  z-index: -1;
+  width: 90%;
 }
 .banner-graph:before {
-    content: "";
-    position: absolute;
-    border-radius: 14.686px;
-    background: rgba(255, 255, 255, 0.00);
-    box-shadow: 0 0 4.589px 1.836px rgba(16, 185, 129, 0.20), 0 0 36.714px 0 rgba(16, 185, 129, 0.12), 0 0.918px 0 0.918px rgba(255, 255, 255, 0.04) inset;
-    width: calc(100% - 1px);
-    height: calc(100% - 1px);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  border-radius: 14.686px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow:
+    0 0 4.589px 1.836px rgba(16, 185, 129, 0.2),
+    0 0 36.714px 0 rgba(16, 185, 129, 0.12),
+    0 0.918px 0 0.918px rgba(255, 255, 255, 0.04) inset;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 .approch-section {
-    background-image: url("../assets/images/approch-section.jpg");
+  background-image: url("../assets/images/approch-section.jpg");
 }
-.document-intelligence{
-     background-image: url("../assets/images/document-intelligence.jpg");
+.four-surgaces-section {
+  background-image: url("../assets/images/four-surgaces-section.jpg");
+}
+.use-cases-section {
+  background-image: url("../assets/images/use-cases.jpg"); 
+}
+.document-intelligence {
+  background-image: url("../assets/images/document-intelligence.jpg");
 }
 .overlay-blure-footer {
-    border-radius: 9999px;
-    background: rgba(5, 150, 105, 0.15); 
-    filter: blur(65px);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-        pointer-events: none;
+  border-radius: 9999px;
+  background: rgba(5, 150, 105, 0.15);
+  filter: blur(65px);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .overlay-shadow-footer {
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.00);
-    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.20), 0 0 40px 0 rgba(16, 185, 129, 0.12), 0 1px 0 1px rgba(255, 255, 255, 0.04) inset;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-        pointer-events: none;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow:
+    0 0 0 1px rgba(16, 185, 129, 0.2),
+    0 0 40px 0 rgba(16, 185, 129, 0.12),
+    0 1px 0 1px rgba(255, 255, 255, 0.04) inset;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 .avobe-footer {
-    backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+@keyframes moveIn {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+@keyframes moveInReverse {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 20;
+  }
+}
+
+.line {
+  stroke: #10b981;
+  stroke-opacity: 0.35;
+  stroke-dasharray: 3.75 7.5;
+  stroke-linecap: round;
+}
+
+/* directions */
+.to-center {
+  animation: moveIn 0.3s linear infinite;
+}
+
+.to-center-reverse {
+  animation: moveInReverse 0.3s linear infinite;
+}
+
+/* ── Layout ── */
+.surface-tabs-wrapper {
+  gap: 14px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #1e293b;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+.surface-sidebar {
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 8px;
+  width: 305px;
+  min-width: 220px;
+  padding: 8px;
+  display: flex;
+}
+.surface-tab-btn {
+  cursor: pointer;
+  text-align: left;
+  background: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 20px 30px;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+  display: flex;
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid rgba(52, 211, 153, 0.1);
+}
+.surface-tab-btn:hover {
+  border: 1px solid rgb(52, 211, 153, 0.5);
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+    rgba(52, 211, 153, 0.1);
+}
+
+.surface-tab-btn.active {
+  border: 1px solid #34d399;
+  background:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+    rgba(52, 211, 153, 0.1);
+}
+.active-arrow {
+  border-top: 8px solid #0000;
+  border-bottom: 8px solid #34d39900;
+  border-right: 12px solid #34d399;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  right: -13px;
+  transform: translateY(-50%) rotate(180deg);
+  opacity: 0.6;
+}
+
+/* ── Label / Title / Tag ── */
+.surface-label {
+  color: #6ee7b7;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: JetBrains-Mono, sans-serif;
+}
+.surface-title {
+  transition: color 0.2s;
+  color: #f8fafc;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.surface-tag {
+  padding: 3px 10px;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* ── Panel Area ── */
+.surface-panels {
+  flex: 1;
+  min-width: 0;
+}
+
+.surface-panel {
+  padding: 40px 30px;
+  height: 100%;
+  animation: fadeIn 0.25s ease;
+  background: rgba(5, 22, 16, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+.surface-content h3 {
+  color: #f8fafc;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32.5px;
+}
+.surface-content-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.surface-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.replaces-section {
+  border-top: 1px solid #333842;
+  padding-top: 24px;
+  margin-top: 8px;
+}
+
+.replaces-section .replaces-section-card {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+}
+
+.replaces-section .replaces-section-card span {
+  color: #7c8693;
+  font-family: JetBrains-Mono, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 160% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+
+.replaces-section .replaces-section-card p {
+  color: #c1cad8;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 185.714% */
+}
+.key-capabilities-section span {
+  color: #7c8693;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 5px;
+  font-family: JetBrains-Mono, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.key-capabilities-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.key-capabilities-list .key-capabilities-card {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  padding: 15px;
+  justify-content: start;
+  align-items: center;
+  gap: 14px;
+  flex: 1 0 0;
+}
+
+.key-capabilities-list .key-capabilities-card span {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--Primary-color, #30cc94);
+  min-width: 6px;
+}
+
+.key-capabilities-list .key-capabilities-card p {
+  color: #c1cad8;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.key-capabilities-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .surface-tabs-wrapper {
+    flex-direction: column;
+  }
+
+  .surface-sidebar {
+    width: 100%;
+    min-width: unset;
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    padding: 8px;
+    gap: 6px;
+    scrollbar-width: none;
+            padding-bottom: 16px;  
+  }
+
+  .surface-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .surface-tab-btn {
+    flex-shrink: 0;
+    min-width: 150px;
+    max-width: 90%;
+    padding: 16px 16px;
+    gap: 6px;
+  }
+
+  /* Hide arrow on mobile */
+.active-arrow {
+    left: 16px;
+    top: 96%;
+    transform: translate(0px, 0px) rotate(32deg);
+}
+
+  .surface-panel { 
+    padding: 24px 16px;
+  }
+  .surface-content {
+    gap: 16px;
+  }
+  .surface-content h3 {
+    font-size: 20px;
+    line-height: 28.5px;
+}
+.replaces-section .replaces-section-card {
+    gap: 10px;
+    flex-direction: column;
+}
+.key-capabilities-list {
+    grid-template-columns: 1fr;
+}
+}
+
+
+
+.inspection-swiper .swiper-slide {
+  transition: all 0.4s ease;
+  transform: scale(0.85) translateY(40px);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+/* Active (front) */
+.inspection-swiper .swiper-slide-active {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* Next slide (behind) */
+.inspection-swiper .swiper-slide-next {
+  transform: scale(0.9) translateY(20px);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+/* Previous slide (behind) */
+.inspection-swiper .swiper-slide-prev {
+  transform: scale(0.9) translateY(20px);
+  opacity: 0.7;
+  z-index: 2;
 }

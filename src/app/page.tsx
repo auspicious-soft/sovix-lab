@@ -1,6 +1,7 @@
 import Button from "@/components/ui/Button";
 import BannerGraph from "@/assets/images/banner-graph.svg";
 import SovixCore from "@/assets/images/sovix-core.svg";
+import SovixCoreCricle from "@/assets/images/sovix-core-cricle.svg";
 import DocumentIntelligence from "@/assets/images/document-intelligence.svg";
 import AIGuidance from "@/assets/images/AI-guidance.svg";
 import Image from "next/image";
@@ -20,8 +21,8 @@ import {
   ZeroDataIcon,
 } from "@/assets/svgicons";
 import StepsSection from "@/components/home/StepsSection";
-import TrustArchitecture from "@/components/home/TrustArchitecture";
 import SurfacesCard from "@/components/home/SurfacesCard";
+import CardBox from "@/components/ui/CardBox";
 
 export default function Home() {
   return (
@@ -276,8 +277,130 @@ export default function Home() {
               </p>
               <Button></Button>
             </div>
-            <div className="">
-              <Image src={SovixCore} alt="Sovix Core" />
+            <div className="relative">
+              <Image
+                src={SovixCoreCricle}
+                alt="Sovix Core Cricle"
+                className="w-full"
+              />
+              <svg
+                className="absolute inset-0"
+                width="620"
+                height="417"
+                viewBox="0 0 620 417"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_309_719)">
+                  <line
+                    className="line to-center-reverse"
+                    x1="301.695"
+                    y1="192.773"
+                    x2="301.695"
+                    y2="586.373"
+                  />
+                </g>
+
+                <g clipPath="url(#clip1_309_719)">
+                  <line
+                    className="line to-center-reverse"
+                    x1="300.305"
+                    y1="217.808"
+                    x2="300.305"
+                    y2="-175.792"
+                  />
+                </g>
+
+                <g clipPath="url(#clip2_309_719)">
+                  <line
+                    className="line to-center-reverse"
+                    x1="330.735"
+                    y1="227.998"
+                    x2="684.183"
+                    y2="401.189"
+                  />
+                </g>
+
+                <g clipPath="url(#clip3_309_719)">
+                  <line
+                    className="line to-center-reverse"
+                    x1="274.768"
+                    y1="204.474"
+                    x2="-66.0994"
+                    y2="7.67443"
+                  />
+                </g>
+
+                <g clipPath="url(#clip4_309_719)">
+                  <line
+                    className="line to-center-reverse"
+                    x1="332.652"
+                    y1="201.748"
+                    x2="687.826"
+                    y2="32.1255"
+                  />
+                </g>
+
+                <g clipPath="url(#clip5_309_719)">
+                  <line
+                    className="line to-center-reverse"
+                    x1="272.459"
+                    y1="216.274"
+                    x2="-68.4081"
+                    y2="413.074"
+                  />
+                </g>
+
+                <defs>
+                  <clipPath id="clip0_309_719">
+                    <rect
+                      width="201.668"
+                      height="4.17244"
+                      transform="translate(303 192.773) rotate(90)"
+                    />
+                  </clipPath>
+                  <clipPath id="clip1_309_719">
+                    <rect
+                      width="201.668"
+                      height="4.17244"
+                      transform="translate(299 217.808) rotate(-90)"
+                    />
+                  </clipPath>
+                  <clipPath id="clip2_309_719">
+                    <rect
+                      width="223.921"
+                      height="4.17243"
+                      transform="translate(331.309 226.826) rotate(26.105)"
+                    />
+                  </clipPath>
+                  <clipPath id="clip3_309_719">
+                    <rect
+                      width="223.921"
+                      height="4.17243"
+                      transform="translate(274.115 205.604) rotate(-150)"
+                    />
+                  </clipPath>
+                  <clipPath id="clip4_309_719">
+                    <rect
+                      width="223.921"
+                      height="4.17243"
+                      transform="translate(332.09 200.571) rotate(-25.5281)"
+                    />
+                  </clipPath>
+                  <clipPath id="clip5_309_719">
+                    <rect
+                      width="223.921"
+                      height="4.17243"
+                      transform="translate(273.111 217.404) rotate(150)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              <Image
+                src={SovixCore}
+                alt="Sovix Core"
+                className="absolute inset-0 w-full"
+              />
             </div>
           </div>
         </div>
@@ -328,30 +451,30 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-7">
-            <TrustArchitecture
+            <CardBox
               title="Zero data egress"
               description="Your prompts, documents and embeddings never leave your perimeter — contractually."
             >
               <ZeroDataIcon />
-            </TrustArchitecture>
-            <TrustArchitecture
+            </CardBox>
+            <CardBox
               title="AWS · Azure · On-prem"
               description="Deploys to GovCloud, sovereign regions and fully air-gapped environments."
             >
               <AWSIcon />
-            </TrustArchitecture>
-            <TrustArchitecture
+            </CardBox>
+            <CardBox
               title="Compliance-ready"
               description="SOC 2 Type II, ISO 27001, GDPR, HIPAA-ready controls; NAIC Model #668 aligned."
             >
               <ComplianceReadyIcon />
-            </TrustArchitecture>
-            <TrustArchitecture
+            </CardBox>
+            <CardBox
               title="No third-party APIs"
               description="Own weights, own inference, own audit trail. Nothing phones home."
             >
               <ThirdPartyIcon />
-            </TrustArchitecture>
+            </CardBox>
           </div>
         </div>
       </section>
@@ -460,30 +583,30 @@ export default function Home() {
 
       <section className="flex flex-col w-full py-10 md:py-[60px] document-intelligence bg-no-repeat bg-center bg-cover">
         <div className="max-w-[1122px] mx-auto px-4 flex items-center justify-between w-full flex-col">
-        <div className="above-footer-outer flex items-center justify-between w-full flex-col relative z-1 lg:p-5">
-          <div className="overlay-blure-footer"></div>
-          <div className="avobe-footer relative grid lg:grid-cols-[1.5fr_1fr] gap-5 w-full rounded-2xl bg-[#0F172A]/10 overflow-hidden border border-[#064E3B]/40 items-center px-4 md:px-10 py-10 lg:px-[64px] lg:py-[64px] z-1">
-            <div className="overlay-shadow-footer"></div>
-            <div className="flex flex-col gap-4 justify-center lg:justify-start items-center lg:items-start text-center lg:text-left ">
-              <div className="text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
-                BOOK A DISCOVERY CALL
-              </div>
+          <div className="above-footer-outer flex items-center justify-between w-full flex-col relative z-1 lg:p-5">
+            <div className="overlay-blure-footer"></div>
+            <div className="avobe-footer relative grid lg:grid-cols-[1.5fr_1fr] gap-5 w-full rounded-2xl bg-[#0F172A]/10 overflow-hidden border border-[#064E3B]/40 items-center px-4 md:px-10 py-10 lg:px-[64px] lg:py-[64px] z-1">
+              <div className="overlay-shadow-footer"></div>
+              <div className="flex flex-col gap-4 justify-center lg:justify-start items-center lg:items-start text-center lg:text-left ">
+                <div className="text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
+                  BOOK A DISCOVERY CALL
+                </div>
 
-              <h2 className="text-[#F8FAFC] text-[28px] md:text-[40px] font-bold leading-[36px] md:leading-[50px] tracking-[-1px]">
-                See Sovix running inside your reference environment.
-              </h2>
-              <p className="text-[#C1CAD8]/80 text-base font-normal leading-[24px] w-full">
-                45-minute technical deep-dive with a solutions architect. We
-                bring the security questionnaire, you bring the hardest document
-                you have.
-              </p>
-            </div>
-            <div className="flex items-center justify-center lg:justify-end  item-center">
-              <Button>Book a Discovery Call</Button>
+                <h2 className="text-[#F8FAFC] text-[28px] md:text-[40px] font-bold leading-[36px] md:leading-[50px] tracking-[-1px]">
+                  See Sovix running inside your reference environment.
+                </h2>
+                <p className="text-[#C1CAD8]/80 text-base font-normal leading-[24px] w-full">
+                  45-minute technical deep-dive with a solutions architect. We
+                  bring the security questionnaire, you bring the hardest
+                  document you have.
+                </p>
+              </div>
+              <div className="flex items-center justify-center lg:justify-end  item-center">
+                <Button>Book a Discovery Call</Button>
+              </div>
             </div>
           </div>
         </div>
-        </div> 
       </section>
     </>
   );
