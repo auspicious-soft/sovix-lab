@@ -284,7 +284,7 @@ export default function Home() {
                 className="w-full"
               />
               <svg
-                className="absolute inset-0"
+                className="absolute inset-0 w-full h-auto"
                 width="620"
                 height="417"
                 viewBox="0 0 620 417"
