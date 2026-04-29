@@ -11,7 +11,6 @@ import {
 import ContactForm from "@/components/ui/ContactForm";
 import Faq from "@/components/ui/Faq";
 import FooterSection from "@/components/ui/FooterSection";
-import Link from "next/link";
 import React from "react";
 
 const Page = () => {
@@ -102,7 +101,8 @@ const Page = () => {
                       Our Location
                     </div>
                     <p className="text-[#FFFFFF] text-sm md:text-base font-semibold max-w-[200px] w-full">
-                      535 Mission St, 14th Floor San Francisco, CA 94105
+                      535 Mission St, 14th Floor
+                      <br /> San Francisco, CA 94105
                     </p>
                   </div>
                 </div>
@@ -191,14 +191,14 @@ const Page = () => {
             </span>{" "}
             with outcomes.
           </h3>
-<video
-  src="/images/slider-video.mp4"
-  className="w-full object-cover aspect-[16/7] rounded-2xl md:rounded-4xl"
-  autoPlay
-  muted
-  loop
-  playsInline
-/>
+          <video
+            src="/images/slider-video.mp4"
+            className="w-full object-cover aspect-[16/7] rounded-2xl md:rounded-4xl"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
         </div>
       </section>
       <FooterSection />

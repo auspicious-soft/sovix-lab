@@ -631,7 +631,7 @@ const Page = () => {
               onClick={() => scrollTo(item.id)}
               className={`text-xs md:text-base leading-[26px] font-medium px-2 py-1 md:px-4 md:py-2 cursor-pointer rounded-full transition ${
                 active === item.id
-                  ? "text-slate-950 bg-[#30cc94]"
+                  ? "text-slate-950 bg-[#34D399]"
                   : "text-[#c1cad8] hover:text-white"
               }`}
             >

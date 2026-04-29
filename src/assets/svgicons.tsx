@@ -196,20 +196,20 @@ export const Compliance5Icon = () => (
 );
 export const EmailGreenIcon = () => (
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 7L13.009 12.727C12.7039 12.9042 12.3573 12.9976 12.0045 12.9976C11.6517 12.9976 11.3051 12.9042 11 12.727L2 7" stroke="#30CC94" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" stroke="#30CC94" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M22 7L13.009 12.727C12.7039 12.9042 12.3573 12.9976 12.0045 12.9976C11.6517 12.9976 11.3051 12.9042 11 12.727L2 7" stroke="#34D399" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" stroke="#34D399" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 );
 export const LocationGreenIcon = () => (
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 10C20 14.4183 12 22 12 22C12 22 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10Z" stroke="#30CC94" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10C11 10.5523 11.4477 11 12 11Z" fill="#30CC94" stroke="#30CC94" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M20 10C20 14.4183 12 22 12 22C12 22 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10Z" stroke="#34D399" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10C11 10.5523 11.4477 11 12 11Z" fill="#34D399" stroke="#34D399" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 );
 
 export const CallGreenIcon = () => (
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.118 14.702L13.9998 15.5C11.2181 14.1038 9.49983 12.5 8.49983 10L9.26978 5.8699L7.81435 2H4.06343C2.93588 2 2.04797 2.93178 2.21637 4.04668C2.63678 6.83 3.87636 11.8765 7.49983 15.5C11.305 19.3052 16.7855 20.9564 19.8018 21.6127C20.9666 21.8662 21.9998 20.9575 21.9998 19.7655V16.1812L18.118 14.702Z" stroke="#30CC94" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M18.118 14.702L13.9998 15.5C11.2181 14.1038 9.49983 12.5 8.49983 10L9.26978 5.8699L7.81435 2H4.06343C2.93588 2 2.04797 2.93178 2.21637 4.04668C2.63678 6.83 3.87636 11.8765 7.49983 15.5C11.305 19.3052 16.7855 20.9564 19.8018 21.6127C20.9666 21.8662 21.9998 20.9575 21.9998 19.7655V16.1812L18.118 14.702Z" stroke="#34D399" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 );
 export const SocialIcon = () => (
