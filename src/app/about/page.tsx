@@ -69,35 +69,38 @@ const Page = () => {
                   </div>
                 ))}
               </div>
-               <div
-                              className="group relative py-5 px-12 rounded-xl border border-[#1E293B] 
+              <div
+                className="group relative py-5 px-5 md:px-12 rounded-xl border border-[#1E293B] 
                     bg-[#0F172A]/60 overflow-hidden transition-all duration-500 
                     hover:border-[#6A7587]"
-                            >
-                              {/* 🔥 Hover background glow (kept same effect, adjusted color) */}
-                              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div
-                                  className="w-[100px] h-[100px] bg-[#10B981]/10 rounded-full 
+              >
+                {/* 🔥 Hover background glow (kept same effect, adjusted color) */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div
+                    className="w-[100px] h-[100px] bg-[#10B981]/10 rounded-full 
                         opacity-0 scale-0 
                         group-hover:opacity-100 group-hover:scale-[8] 
                         transition-all duration-500 ease-out"
-                                />
-                              </div>
-              
-                              {/* Content */}
-                              <div
-                                className="relative z-10 gap-2 flex flex-col relative 
+                  />
+                </div>
+
+                {/* Content */}
+                <div
+                  className="relative z-10 gap-2 flex flex-col relative 
                 transition-all duration-500 ease-out 
-                group-hover:-translate-y-1" 
-                              >
-                  
-                                {/* Description */}
-                                <p className="text-[#C1CAD8] text-sm leading-6">
-                                  The question was never can AI read an insurance document. The question was can it do so without the document leaving the building. That&apos;s what we set out to answer.
-                                </p>
-                                <span className="text-green text-[10px] font-normal font-jetbrainsmono uppercase tracking-[1px]">- Marcus Webb, Founder & CEO</span>
-                              </div>
-                            </div>
+                group-hover:-translate-y-1"
+                >
+                  {/* Description */}
+                  <p className="text-[#C1CAD8] text-sm leading-6">
+                    The question was never can AI read an insurance document.
+                    The question was can it do so without the document leaving
+                    the building. That&apos;s what we set out to answer.
+                  </p>
+                  <span className="text-green text-[10px] font-normal font-jetbrainsmono uppercase tracking-[1px]">
+                    - Marcus Webb, Founder & CEO
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

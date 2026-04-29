@@ -554,7 +554,7 @@ form.form-design textarea {
     bottom: 0;
     left: 0;
 background-image: linear-gradient(rgb(48 204 148 / 8%) 1px, #0000 1px), linear-gradient(90deg, rgb(48 204 148 / 8%) 1px, #0000 1px);
-    background-size: 300px 110px;
+    background-size: 300px 148px;
     pointer-events: none;
 }
 @keyframes fadeIn {
