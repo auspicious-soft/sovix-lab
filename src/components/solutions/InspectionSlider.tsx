@@ -42,7 +42,7 @@ export default function CardStackSlider() {
     <div className="pb-8">
       {/* HEADER */}
       <div className="flex justify-between items-center mb-3 text-white">
-        <h3 className="text-[#FFFFFF] text-base  md:text-[20px] font-jetbrainsmono uppercase tracking-[1px]">
+        <h3 className="text-[#FFFFFF] text-sm md:text-base  md:text-[20px] font-jetbrainsmono uppercase tracking-[1px]">
           {slides[active].title}
         </h3>
         <div className="flex justify-between items-center gap-3 md:gap-5">

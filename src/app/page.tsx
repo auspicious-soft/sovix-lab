@@ -33,8 +33,8 @@ export default function Home() {
             <div className="flex flex-col gap-5 justify-start items-center lg:items-start ">
               <div className="pl-[7px] pr-2.5 py-[7px] bg-slate-900/60 rounded-full outline outline-1 outline-offset-[-1px] outline-slate-800 inline-flex justify-center text-center lg:text-left lg:justify-start items-center flex-wrap gap-2">
                 <div className="px-2.5 py-[3px] bg-emerald-500/10 rounded-full inline-flex justify-start items-center gap-1.5">
-                  <div className="size-1.5 bg-[#30cc94] rounded-full" />
-                  <span className="justify-center text-[#30cc94] text-[10px] md:text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
+                  <div className="size-1.5 bg-[#34D399] rounded-full" />
+                  <span className="justify-center text-[#34D399] text-[10px] md:text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
                     PRIVATE AI · v4.2
                   </span>
                 </div>
@@ -48,7 +48,7 @@ export default function Home() {
                   <span className="text-green">Risk</span> and{" "}
                   <span className="text-green">Underwriting</span> Operations
                 </h1>
-                <p className="text-[#c1cad8] text-base font-normal leading-[26px] max-w-[590px] w-full">
+                <p className="text-[#c1cad8] text-sm md:text-base font-normal leading-[26px] max-w-[590px] w-full">
                   Bring AI to your data, not the other way around. Deploy
                   secure, on-prem or cloud-based models trained on your internal
                   documents and workflows. Enable faster analysis, streamline
@@ -152,7 +152,7 @@ export default function Home() {
                 Risk teams <span className="text-green">drown </span> in
                 documents — and AI hasn&apos;t helped.
               </h2>
-              <p className="text-[#020617]/80 text-base font-normal leading-[24px] w-full">
+              <p className="text-[#020617]/80 text-sm md:text-base font-normal leading-[24px] w-full">
                 The last decade built dashboards. The next one must read, reason
                 and decide — without ever letting your data leave the building.
               </p>
@@ -221,7 +221,7 @@ export default function Home() {
                 ].map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-3 text-[#C1CAD8] text-base font-normal line-through "
+                    className="flex items-start gap-3 text-[#C1CAD8] text-sm md:text-base font-normal line-through "
                   >
                     <span className="mt-1">
                       <CroosIcon />
@@ -249,7 +249,7 @@ export default function Home() {
                 ].map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-3 text-[#EFEFEF] text-base font-normal "
+                    className="flex items-start gap-3 text-[#EFEFEF] text-sm md:text-base font-normal "
                   >
                     <span className="mt-1">
                       <TickIcon />
@@ -271,7 +271,7 @@ export default function Home() {
                 A complete <span className="text-green">AI System</span> for
                 Risk and Underwriting Operations
               </h2>
-              <p className="text-[#C1CAD8]/80 text-base font-normal leading-[24px] w-full">
+              <p className="text-[#C1CAD8]/80 text-sm md:text-base font-normal leading-[24px] w-full">
                 The last decade built dashboards. The next one must read, reason
                 and decide — without ever letting your data leave the building.
               </p>
@@ -498,7 +498,7 @@ export default function Home() {
                 surfaces.
               </h2>
             </div>
-            <p className="text-[#020617]/80 text-base font-normal leading-[24px] w-full text-center lg:text-left">
+            <p className="text-[#020617]/80 text-sm md:text-base font-normal leading-[24px] w-full text-center lg:text-left">
               Each capability is independently deployable and speaks to the
               others over an internal service mesh — no data leaves the cluster.
             </p>
@@ -519,7 +519,7 @@ export default function Home() {
               <h3 className="text-[#020617] text-[20px] md:text-[24px] leading-6  md:leading-8 font-bold max-w-[432px] w-full">
                 Read everything, trust the extraction.
               </h3>
-              <p className="text-[#020617]/80 text-base font-normal leading-[24px] text-left max-w-[432px] w-full">
+              <p className="text-[#020617]/80 text-sm md:text-base font-normal leading-[24px] text-left max-w-[432px] w-full">
                 OCR, table parsing, structured extraction and cross-document
                 reasoning with citations back to the source page.
               </p>
@@ -570,7 +570,7 @@ export default function Home() {
               <h3 className="text-[#020617] text-[20px] md:text-[24px] leading-6  md:leading-8 font-bold max-w-[432px] w-full lg:m-auto">
                 Turn data into decisions you can trust
               </h3>
-              <p className="text-[#020617]/80 text-base font-normal leading-[24px] text-left max-w-[432px] w-full lg:m-auto">
+              <p className="text-[#020617]/80 text-sm md:text-base font-normal leading-[24px] text-left max-w-[432px] w-full lg:m-auto">
                 Combine multiple data points, signals, and historical context to
                 generate clear, explainable decisions. Sovix evaluates risk in
                 real time, highlights key factors, and provides
@@ -595,7 +595,7 @@ export default function Home() {
                 <h2 className="text-[#F8FAFC] text-[28px] md:text-[40px] font-bold leading-[36px] md:leading-[50px] tracking-[-1px]">
                   See Sovix running inside your reference environment.
                 </h2>
-                <p className="text-[#C1CAD8]/80 text-base font-normal leading-[24px] w-full">
+                <p className="text-[#C1CAD8]/80 text-sm md:text-base font-normal leading-[24px] w-full">
                   45-minute technical deep-dive with a solutions architect. We
                   bring the security questionnaire, you bring the hardest
                   document you have.

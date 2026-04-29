@@ -37,7 +37,7 @@ const FeatureCard = ({ number, title, description, children }: CardProps) => {
           <h3 className="text-[#020617] text-lg font-semibold capitalize leading-6">
             {title}
           </h3>
-          <p className="text-[#020617]/80 text-base font-normal leading-[26px]">
+          <p className="text-[#020617]/80 text-sm md:text-base font-normal leading-[26px]">
             {description}
           </p>
         </div>

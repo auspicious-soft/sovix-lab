@@ -60,10 +60,10 @@ const StepsSection = () => {
 
             {/* Content */}
             <div className="flex flex-col flex-grow">
-              <h3 className="text-[#020617] font-bold mb-2 text-base">
+              <h3 className="text-[#020617] font-bold mb-2 text-sm md:text-base">
                 {item.title}
               </h3>
-              <p className="mb-4 text-[#020617]/80 text-base leading-[26px]">
+              <p className="mb-4 text-[#020617]/80 text-sm md:text-base leading-[26px]">
                 {item.desc}
               </p>
 

@@ -3,7 +3,7 @@
 :root {
   --background: #020617;
   --foreground: #c1cad8;
-  --green: #30cc94;
+  --green: #34D399;
   --dark-paragraph: #c1cad8;
 }
 
@@ -150,7 +150,9 @@
   font-style: normal;
   font-display: swap;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--background);
   color: var(--foreground);
@@ -186,6 +188,9 @@ body {
   right: 0;
   z-index: -1;
   pointer-events: none;
+}
+.banner-inner {
+   background-image: url("../assets/images/page-banner.jpg");
 }
 .approch-section {
   background-image: url("../assets/images/approch-section.jpg");
@@ -305,15 +310,15 @@ body {
 }
 
 .surface-tab-btn.active {
-  border: 1px solid #34d399;
+  border: 1px solid #34D399;
   background:
     linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
     rgba(52, 211, 153, 0.1);
 }
 .active-arrow {
   border-top: 8px solid #0000;
-  border-bottom: 8px solid #34d39900;
-  border-right: 12px solid #34d399;
+  border-bottom: 8px solid #34D39900;
+  border-right: 12px solid #34D399;
   width: 0;
   height: 0;
   position: absolute;
@@ -348,7 +353,7 @@ body {
   border-radius: 4px;
   border: 1px solid rgba(16, 185, 129, 0.2);
   background: rgba(16, 185, 129, 0.1);
-  color: #34d399;
+  color: #34D399;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -454,7 +459,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 9999px;
-  background: var(--Primary-color, #30cc94);
+  background: var(--Primary-color, #34D399);
   min-width: 6px;
 }
 
@@ -471,6 +476,76 @@ body {
   flex-direction: column;
   gap: 4px;
 }
+form.form-design input, form.form-design select, form.form-design textarea {
+    color: #C1CAD8 !important;
+    font-size: 16px;
+    border: solid 1px #4A4A4A;
+    padding: 16px 16px;
+    border-radius: 8px;
+    width: 100%;
+        font-family: Svatopluk, sans-serif;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #C1CAD8 !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #C1CAD8 !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #C1CAD8 !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #C1CAD8 !important;
+}
+form.form-design input.mt-1[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    background-color: #0a1022;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    padding: 0;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+/* Checked state */
+form.form-design input.mt-1[type="checkbox"]:checked {
+  background-color: #34D399; /* your bg */
+  border-color: #34D399;     /* your border */
+}
+
+/* Checkmark */
+form.form-design input.mt-1[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  width: 4px;
+  height: 8px;
+  border: solid #000; /* checkmark color */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Hover */
+form.form-design input.mt-1[type="checkbox"]:hover {
+  border-color: #2ed3a0;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+}
+select::-ms-expand {
+  display: none;
+}
+form.form-design textarea {
+    max-height: 142px;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -484,6 +559,13 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  form.form-design input, form.form-design select, form.form-design textarea {
+    padding: 12px;
+    font-size: 14px;
+}
+  .surface-content p {
+    font-size: 14px;
+}
   .surface-tabs-wrapper {
     flex-direction: column;
   }

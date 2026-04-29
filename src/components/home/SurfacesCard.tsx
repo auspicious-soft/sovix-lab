@@ -37,7 +37,7 @@ const SurfacesCard = ({ number, title, description, children }: CardProps) => {
           <h3 className="text-[#020617] text-[20px] md:text-[24px] leading-6 md:leading-8 font-bold text-left">
             {title}
           </h3>
-          <p className="text-[#020617]/80 text-base font-normal leading-[24px] w-full text-left">
+          <p className="text-[#020617]/80 text-sm md:text-base font-normal leading-[24px] w-full text-left">
             {description}
           </p>
         </div>
