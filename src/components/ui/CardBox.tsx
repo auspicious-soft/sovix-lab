@@ -23,7 +23,7 @@ const CardBox = ({ title, description, children }: CardProps) => {
       </div>
 
       <div
-        className="relative z-10 flex flex-col relative 
+        className="z-10 flex flex-col relative 
   transition-all duration-500 ease-out 
   group-hover:-translate-y-1"
       >

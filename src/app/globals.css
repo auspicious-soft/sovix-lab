@@ -476,7 +476,8 @@ body {
   flex-direction: column;
   gap: 4px;
 }
-form.form-design input, form.form-design select, form.form-design textarea {
+form.form-design input, form.form-design select, form.form-design textarea,
+.search input {
     color: #C1CAD8 !important;
     font-size: 16px;
     border: solid 1px #4A4A4A;
@@ -534,6 +535,9 @@ form.form-design input.mt-1[type="checkbox"]:checked::after {
 form.form-design input.mt-1[type="checkbox"]:hover {
   border-color: #2ed3a0;
 }
+.search input {
+    font-size: 14px;
+}
 select {
   appearance: none;
   -webkit-appearance: none;
@@ -554,7 +558,7 @@ form.form-design textarea {
     bottom: 0;
     left: 0;
 background-image: linear-gradient(rgb(48 204 148 / 8%) 1px, #0000 1px), linear-gradient(90deg, rgb(48 204 148 / 8%) 1px, #0000 1px);
-    background-size: 300px 148px;
+    background-size: 300px 158px;
     pointer-events: none;
 }
 @keyframes fadeIn {
@@ -570,7 +574,11 @@ background-image: linear-gradient(rgb(48 204 148 / 8%) 1px, #0000 1px), linear-g
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  form.form-design input, form.form-design select, form.form-design textarea {
+  .grid-border:before {
+    background-size: 104px 88px;
+}
+  form.form-design input, form.form-design select, form.form-design textarea,
+  .search input {
     padding: 12px;
     font-size: 14px;
 }
