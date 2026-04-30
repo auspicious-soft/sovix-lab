@@ -171,7 +171,7 @@ const ALL_BLOGS = [
 const ITEMS_PER_PAGE = 6;
 
 const categoryColors = {
-  Research: "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30",
+  Research: "bg-[#0C2E30] text-green border-green border ",
   Engineering: "bg-blue-500/20 text-blue-400 border border-blue-500/30",
   Compliance: "bg-amber-500/20 text-amber-400 border border-amber-500/30",
   Product: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
@@ -187,10 +187,10 @@ function CategoryBadge({
 }) {
   const color =
     categoryColors[category as keyof typeof categoryColors] ||
-    "bg-slate-500/20 text-slate-400 border border-slate-500/30";
+    "bg-slate-500/20 text-slate-400 border border-slate-500/30 ";
   return (
     <span
-      className={`inline-block rounded-sm font-mono uppercase tracking-widest ${small ? "text-[9px] px-2 py-0.5" : "text-[10px] px-2.5 py-1"} ${color}`}
+      className={`inline-block rounded-sm uppercase tracking-widest ${small ? "text-[9px] px-4 py-1.5 tracking-[1px] font-normal font-jetbrainsmono" : "text-[10px] px-2.5 py-1"} ${color}`}
     >
       {category}
     </span>
@@ -199,11 +199,11 @@ function CategoryBadge({
 
 function AuthorChip({ initials, name }: { initials: string; name: string }) {
   return (
-    <div className="flex items-center gap-2">
-      <div className="w-7 h-7 rounded-full bg-emerald-500 flex items-center justify-center text-[10px] font-bold text-slate-900 shrink-0">
+    <div className="flex items-center gap-3">
+      <div className="w-10 h-10 rounded-full bg-[#0C2E30] text-green border-green border flex items-center tracking-[1px] justify-center text-base font-bold  shrink-0 font-jetbrainsmono">
         {initials}
       </div>
-      <span className="text-[11px] uppercase tracking-widest text-slate-400 font-mono">
+      <span className="text-[9px] uppercase tracking-[1px] text-green font-jetbrainsmono ">
         {name}
       </span>
     </div>
@@ -321,7 +321,7 @@ export default function BlogCard() {
                   <span
                     className={`ml-2.5 text-xs rounded-sm rounded px-2  border  ${ 
                       activeCategory === cat
-                        ? "bg-emerald-500/20 text-emerald-400 border-green"
+                        ? "bg-[#0C2E30] text-green border-green"
                         : "bg-[#1A1D1D] text-white/50 border-[#1A1D1D]"
                     }`}
                   >
@@ -342,26 +342,26 @@ export default function BlogCard() {
         search === "" && (
           <section className="pt-[40px] md:pt-[60px]">
             <div className="max-w-326.5 mx-auto px-4">
-            <p className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px] mb-4">
+            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px] mb-4">
               Featured Article
-              <div className="flex-1 h-[1px] bg-white/20"></div>
-            </p>
-            <div className="featured-card border border-[#0f2d32] rounded-sm overflow-hidden flex flex-col md:flex-row">
-              <div className="md:w-[42%] h-56 md:h-auto overflow-hidden">
-                <Image
+              <div className="flex-1 h-[1px] bg-green/20"></div>
+            </div>
+            <div className="featured-card bg-[#0F172A]/60 border border-[#1E293B] p-4 md:p-5 rounded-xl overflow-hidden gap-4 grid md:grid-cols-2">
+              <div className="overflow-hidden">
+                <img
                   src={featured.image}
                   alt={featured.title}
-                  className="w-full h-full object-cover opacity-70 hover:opacity-90 transition-opacity duration-500"
+                  className="w-full aspect-[1/0.7] object-cover rounded-xl"
                 />
               </div>
-              <div className="flex-1 p-8 flex flex-col justify-between">
+              <div className="lg:p-8 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-3 mb-5">
+                  <div className="flex items-center gap-6 mb-5">
                     <CategoryBadge category={featured.category} />
-                    <span className="mono text-[10px] text-slate-500 uppercase tracking-wider">
+                    <span className="text-white/40 text-[9px] tracking-[1px] font-normal font-jetbrainsmono uppercase">
                       {featured.date}
                     </span>
-                    <span className="mono text-[10px] text-emerald-500/60 uppercase tracking-widest ml-auto">
+                    <span className="text-white/40 text-[9px] tracking-[1px] font-normal font-jetbrainsmono uppercase ml-auto">
                       Featured
                     </span>
                   </div>
@@ -391,14 +391,13 @@ export default function BlogCard() {
         )}
 
       {/* Blog List */}
-      <section>
+      <section className="py-10">
+       <div className="max-w-326.5 mx-auto px-4">
         <div className="flex items-center justify-between mb-5">
-          <p className="mono text-[10px] uppercase tracking-[0.25em] text-slate-600">
-            {search ? `Search Results` : `Latest Articles`}
-          </p>
-          <p className="mono text-[10px] text-slate-600">
-            {filtered.length} article{filtered.length !== 1 ? "s" : ""}
-          </p>
+            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px] mb-4 w-full">
+               {search ? `Search Results` : `Latest Articles`}
+              <div className="flex-1 h-[1px] bg-green/20"></div>
+            </div>
         </div>
 
         {paginated.length === 0 ? (
@@ -424,9 +423,9 @@ export default function BlogCard() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a1618] via-transparent to-transparent" />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-3 mb-3">
                     <CategoryBadge category={blog.category} small />
-                    <span className="mono text-[9px] text-slate-600 uppercase tracking-wider">
+                    <span className="text-white/40 text-[9px] tracking-[1px] font-normal font-jetbrainsmono uppercase">
                       {blog.date}
                     </span>
                   </div>
@@ -484,6 +483,7 @@ export default function BlogCard() {
             </button>
           </div>
         )}
+        </div>
       </section>
     </>
   );
