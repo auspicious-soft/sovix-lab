@@ -183,7 +183,7 @@ export default function TeamSection() {
                 className="w-full object-cover object-top aspect-[1/0.7]"
               />
             </div>
-            <div className="flex flex-col justify-center relative transition-all duration-500">
+            <div className="flex flex-col justify-center relative transition-all overflow-hidden duration-500">
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div
                   className="w-[68px] h-[68px] bg-[#10B981]/10 rounded-full
