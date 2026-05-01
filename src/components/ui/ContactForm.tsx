@@ -30,15 +30,43 @@ const handleChange = (
   }));
 };
 
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
   if (!form.consent) {
     alert("Please accept the consent checkbox.");
     return;
-  } 
+  }
 
-  console.log(form);
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Message sent successfully!");
+
+      setForm({
+        name: "",
+        surname: "",
+        email: "",
+        company: "",
+        interest: "",
+        message: "",
+        consent: false,
+      });
+    } else {
+      alert("Failed to send message");
+    }
+  } catch (error) {
+    alert("Error sending message");
+  }
 };
   return (
     <form
