@@ -91,11 +91,6 @@ const Header = () => {
           >
             Contact
           </Link>
-
-          {/* Mobile Button */}
-          <div className="pt-2">
-            <Button className="justify-center"></Button>
-          </div>
         </div>
       )}
     </header>

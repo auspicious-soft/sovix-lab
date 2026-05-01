@@ -42,9 +42,9 @@ const Footer = () => {
           </div>
 
           {/* Product */}
-          <div className="space-y-5">
+          <div className="space-y-2 md:space-y-5">
             <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">Product</h4>
-            <ul className="space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
+            <ul className="space-y-2 md:space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
               <li>
                 <Link href="/solutions">Solutions</Link>
               </li>
@@ -58,9 +58,9 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div className="space-y-5">
+          <div className="space-y-3 md:space-y-5">
              <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">Company</h4>
-            <ul className="space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
+            <ul className="space-y-2 md:space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
               <li>
                 <Link href="/contact">Contact</Link>
               </li>
@@ -76,7 +76,7 @@ const Footer = () => {
           {/* Contact */}
           <div className="space-y-5">
             <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">More Information</h4>
-            <div className="space-y-5 space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
+            <div className="space-y-3 md:space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
               <p className="flex items-center gap-2"> <CallIcon /> +1 458 745 9658</p>
               <p className="flex items-center gap-2"> <Emailcon /> hello@sovixlabs.com</p>
             </div>

@@ -172,118 +172,120 @@ export default function SingleBlogPage({ params }: Props) {
                       {blog.author}
                     </span>
                   </div>
-                  <span className="text-white/40 text-[11px] font-jetbrainsmono uppercase tracking-[1px]">
+                  <span className="text-white/40 text-[12px] font-jetbrainsmono uppercase tracking-[1px]"> 
                     {blog.date}
                   </span>
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
         </div>
         <Image
-          src={JournalText}
+          src={JournalText} 
           alt="journal text"
           className="absolute right-0 top-1/2 -translate-y-1/2 pointer-none -z-1"
         />
       </section>
-     <section className="py-10 md:py-[60px]">
-      <div className="max-w-326.5 mx-auto px-4 flex justify-between w-full gap-6 lg:gap-10">
-        {/* LEFT: Article content — rendered entirely from blog.sections */}
-         <article
-          ref={contentRef}
-          className="flex-1"
-          dangerouslySetInnerHTML={{ __html: blog.blogContent ?? "<p>Content coming soon.</p>" }}
-        />
+      <section className="py-10 md:py-[60px]">
+        <div className="max-w-326.5 mx-auto px-4 flex justify-between w-full gap-6 lg:gap-10">
+          {/* LEFT: Article content — rendered entirely from blog.sections */}
+          <article
+            ref={contentRef}
+            className="flex-1"
+            dangerouslySetInnerHTML={{
+              __html: blog.blogContent || "<p>Content coming soon.</p>", 
+            }}
+          />
 
-        {/* RIGHT: Sticky sidebar */}
-        <aside className="hidden lg:flex flex-col gap-5 w-[220px] xl:w-[240px] shrink-0 sticky top-20">
-          {/* TOC — built from blog.sections */}
-          {sections.length > 0 && (
-            <div className="bg-[#051610]/60 rounded-lg outline outline-1 outline-[#00e5a0]/20 backdrop-blur-[3px] overflow-hidden">
-              <div className="px-4 py-3 border-b border-[#1E293B]">
-                <span className="text-[10px] font-jetbrainsmono uppercase tracking-[2px] text-white/40">
-                  In This Article
-                </span>
-              </div>
-              <nav className="flex flex-col">
-                {sections.map((section) => {
-                  const isActive = activeId === section.id;
-                  return (
-                    <button
-                      key={section.id}
-                      onClick={() => scrollToSection(section.id)}
-                      className={`text-left px-4 py-2.5 text-[12px] leading-[1.5] transition-colors cursor-pointer border-l-2 ${
-                        isActive
-                          ? "bg-[#0C2E30] text-[#30CC94] border-[#30CC94]"
-                          : "text-white/50 border-transparent hover:text-white/80 hover:bg-white/5"
-                      }`}
-                    >
-                      {section.title}
-                    </button>
-                  );
-                })}
-              </nav>
-            </div>
-          )}
-
-          {/* Written by */}
-          <div className="bg-[#051610]/60 rounded-lg  outline outline-1 outline-[#00e5a0]/20 backdrop-blur-[3px] overflow-hidden">
-            <div className="px-4 py-3 border-b border-green/20">
-              <span className="text-[10px] font-jetbrainsmono uppercase tracking-[1px] text-white/40">
-                Written By
-              </span>
-            </div>
-            <div className="p-4 flex flex-col gap-3">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-[#0C2E30] border border-green flex items-center justify-center text-[11px] font-bold font-jetbrainsmono text-[#30CC94] tracking-[1px] shrink-0">
-                  {blog.authorInitials}
+          {/* RIGHT: Sticky sidebar */}
+          <aside className="hidden lg:flex flex-col gap-5 w-[220px] xl:w-[240px] shrink-0 sticky top-20">
+            {/* TOC — built from blog.sections */}
+            {sections.length > 0 && (
+              <div className="bg-[#051610]/60 rounded-lg outline outline-1 outline-[#00e5a0]/20 backdrop-blur-[3px] overflow-hidden">
+                <div className="px-4 py-3 border-b border-[#1E293B]">
+                  <span className="text-[10px] font-jetbrainsmono uppercase tracking-[2px] text-white/40">
+                    In This Article 
+                  </span>
                 </div>
-                <div>
-                  <p className="text-xs font-jetbrainsmono uppercase tracking-[1px] text-white leading-none mb-1">
-                    {blog.author}
-                  </p>
-                  <p className="text-xs text-green">
-                    {blog.authorRole ?? "Author"}
-                  </p>
-                </div>
+                <nav className="flex flex-col">
+                  {sections.map((section) => {
+                    const isActive = activeId === section.id;
+                    return (
+                      <button
+                        key={section.id}
+                        onClick={() => scrollToSection(section.id)}
+                        className={`text-left px-4 py-2.5 text-[12px] leading-[1.5] transition-colors cursor-pointer border-l-2 ${
+                          isActive
+                            ? "bg-[#0C2E30] text-[#30CC94] border-[#30CC94]"
+                            : "text-white/50 border-transparent hover:text-white/80 hover:bg-white/5"
+                        }`}
+                      >
+                        {section.title}
+                      </button>
+                    );
+                  })}
+                </nav>
               </div>
-              {blog.authorBio && (
-                <p className="text-[#d9dbe0] text-xs font-normal leading-5">
-                  {blog.authorBio}
-                </p> 
-              )}
-            </div>
-          </div>
+            )}
 
-          {/* Related articles */}
-          {relatedArticles.length > 0 && (
-            <div className="bg-[#051610]/60 rounded-lg outline outline-1 outline-[#00e5a0]/20 backdrop-blur-[3px] overflow-hidden">
+            {/* Written by */}
+            <div className="bg-[#051610]/60 rounded-lg  outline outline-1 outline-[#00e5a0]/20 backdrop-blur-[3px] overflow-hidden">
               <div className="px-4 py-3 border-b border-green/20">
                 <span className="text-[10px] font-jetbrainsmono uppercase tracking-[1px] text-white/40">
-                  Related Articles
+                  Written By
                 </span>
               </div>
-              <div className="flex flex-col divide-y divide-[#1E293B]">
-                {relatedArticles.map((article) => (
-                  <Link
-                    key={article.id}
-                    href={`/blog/${article.id}`}
-                    className="p-4 flex flex-col gap-2 hover:bg-white/5 transition-colors group items-start"
-                  >
-                    <CategoryBadge category={article.category} />
-                    <p className="text-white/50 text-xs font-normal group-hover:text-white transition-colors leading-5">
-                      {article.title}
+              <div className="p-4 flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-[#0C2E30] border border-green flex items-center justify-center text-[11px] font-bold font-jetbrainsmono text-[#30CC94] tracking-[1px] shrink-0">
+                    {blog.authorInitials}
+                  </div>
+                  <div>
+                    <p className="text-xs font-jetbrainsmono uppercase tracking-[1px] text-white leading-none mb-1">
+                      {blog.author}
                     </p>
-                    <p className="text-white/50 text-[10px] font-jetbrainsmono uppercase tracking-[1px]">
-                      {article.author}
+                    <p className="text-xs text-green">
+                      {blog.authorRole ?? "Author"}
                     </p>
-                  </Link>
-                ))}
+                  </div>
+                </div>
+                {blog.authorBio && (
+                  <p className="text-[#d9dbe0] text-xs font-normal leading-5">
+                    {blog.authorBio}
+                  </p>
+                )}
               </div>
             </div>
-          )}
-        </aside>
-      </div>
+
+            {/* Related articles */}
+            {relatedArticles.length > 0 && (
+              <div className="bg-[#051610]/60 rounded-lg outline outline-1 outline-[#00e5a0]/20 backdrop-blur-[3px] overflow-hidden">
+                <div className="px-4 py-3 border-b border-green/20">
+                  <span className="text-[10px] font-jetbrainsmono uppercase tracking-[1px] text-white/40">
+                    Related Articles
+                  </span>
+                </div>
+                <div className="flex flex-col divide-y divide-[#1E293B]">
+                  {relatedArticles.map((article) => (
+                    <Link
+                      key={article.id}
+                      href={`/blog/${article.id}`}
+                      className="p-4 flex flex-col gap-2 hover:bg-white/5 transition-colors group items-start"
+                    >
+                      <CategoryBadge category={article.category} />
+                      <p className="text-white/50 text-xs font-normal group-hover:text-white transition-colors leading-5">
+                        {article.title}
+                      </p>
+                      <p className="text-white/50 text-[10px] font-jetbrainsmono uppercase tracking-[1px]">
+                        {article.author}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </aside>
+        </div>
       </section>
     </>
   );

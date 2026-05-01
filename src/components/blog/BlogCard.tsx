@@ -51,7 +51,7 @@ function AuthorChip({ initials, name }: { initials: string; name: string }) {
         {initials}
       </div>
       <span className="text-[12px] uppercase tracking-[1px] text-green font-jetbrainsmono  ">
-        {name} 
+        {name}
       </span>
     </div>
   );
@@ -161,12 +161,12 @@ export default function BlogCard() {
                   className={` text-xs lg:text-base px-4 py-4 whitespace-nowrap transition-colors border-b border-b-2 cursor-pointer hover:text-white  ${
                     activeCategory === cat
                       ? "text-white border-green"
-                        : " text-white/50 border-transparent"
+                      : " text-white/50 border-transparent"
                   }`}
                 >
                   {cat}
                   <span
-                    className={`ml-2.5 text-xs rounded-sm rounded px-2  border  ${ 
+                    className={`ml-2.5 text-xs rounded-sm rounded px-2  border  ${
                       activeCategory === cat
                         ? "bg-[#0C2E30] text-green border-green"
                         : "bg-[#1A1D1D] text-white/50 border-[#1A1D1D]"
@@ -177,158 +177,162 @@ export default function BlogCard() {
                 </button>
 
                 {!isLast && <div className="w-[1px] h-4 bg-white/20"></div>}
-              </div> 
+              </div>
             );
           })}
         </div>
       </div>
-   
+
       {/* Featured Article */}
       {featured &&
         (activeCategory === "All" || activeCategory === featured.category) &&
         search === "" && (
           <section className="pt-[40px] md:pt-[60px] ">
             <div className="max-w-326.5 mx-auto px-4">
-            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono  uppercase tracking-[1px] mb-4">
-              Featured Article
-              <div className="flex-1 h-[1px] bg-green/20"></div>
-            </div>
-            <div className="featured-card bg-[#0F172A]/60 border border-[#1E293B] p-4 md:p-5 rounded-xl overflow-hidden items-center gap-4 grid md:grid-cols-2">
-              <div className="overflow-hidden">
-                <img
-                  src={featured.image}
-                  alt={featured.title}
-                  className="w-full aspect-[1/0.7] object-cover rounded-xl"
-                />
+              <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono  uppercase tracking-[1px] mb-4">
+                Featured Article
+                <div className="flex-1 h-[1px] bg-green/20"></div>
               </div>
-              <div className="lg:p-8 flex flex-col">
-                <div>
-                  <div className="flex items-center gap-6 mb-6">
-                    <CategoryBadge category={featured.category} />
-                    <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase">
-                      {featured.date}
-                    </span>
-                    <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase ml-auto">
-                      Featured
-                    </span>
-                  </div>
-                  <h2 className="text-xl md:text-2xl font-semibold text-white leading-snug mb-4">
-                    {featured.title}
-                  </h2>
-                  <p className="text-[#FFFFFF]/80 text-sm md:text-base font-normal leading-[26px] w-full line-clamp-5 flex-1">  
-                    {featured.excerpt}
-                  </p>
-                </div>
-                <div className="flex items-center justify-between mt-6">
-                  <AuthorChip
-                    initials={featured.authorInitials}
-                    name={featured.author}
-                  />
-                  <Link
-                    href={`/blog/${featured.id}`}
-                    className="read-link flex items-center gap-1.5 text-[12px] text-green"
-                  >
-                    Read Article <span>→</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            </div>  
-          </section>
-        )}
-
-      {/* Blog List */}
-      <section className="py-10">
-       <div className="max-w-326.5 mx-auto px-4">
-        <div className="flex items-center justify-between">
-            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono  uppercase tracking-[1px] mb-4 w-full">
-               {search ? `Search Results` : `Latest Articles`}
-              <div className="flex-1 h-[1px] bg-green/20"></div>
-            </div>
-        </div>
-
-        {paginated.length === 0 ? (
-          <div className="text-center py-20 text-white/50">
-            <p className="text-4xl mb-4">∅</p>
-            <p className=" text-base uppercase tracking-widest">
-              No articles found
-            </p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-            {paginated.map((blog) => (
-              <article
-                key={blog.id}
-                className="blog-card p-0 flex flex-col group bg-[#0F172A]/60 border border-[#1E293B] rounded-xl overflow-hidden"
-              >
-                <div className="overflow-hidden h-60 relative">
+              <div className="featured-card bg-[#0F172A]/60 border border-[#1E293B] p-4 md:p-5 rounded-xl overflow-hidden items-center gap-4 grid md:grid-cols-2">
+                <div className="overflow-hidden">
                   <img
-                    src={blog.image}
-                    alt={blog.title}
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 group-hover:scale-105 transform transition-transform"
+                    src={featured.image}
+                    alt={featured.title}
+                    className="w-full aspect-[1/0.7] object-cover rounded-xl"
                   />
                 </div>
-                <div className="p-4 flex flex-col flex-1 lg:mt-4">
-                  <div className="flex items-center justify-between gap-3 mb-6">
-                    <CategoryBadge category={blog.category} small />
-                    <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase">
-                      {blog.date}
-                    </span>
+                <div className="lg:p-8 flex flex-col">
+                  <div>
+                    <div className="flex items-center gap-6 mb-6">
+                      <CategoryBadge category={featured.category} />
+                      <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase">
+                        {featured.date}
+                      </span>
+                      <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase ml-auto">
+                        Featured
+                      </span>
+                    </div>
+                    <h2 className="text-xl md:text-2xl font-semibold text-white leading-snug mb-4">
+                      {featured.title}
+                    </h2>
+                    <p className="text-[#FFFFFF]/80 text-sm md:text-base font-normal leading-[26px] w-full line-clamp-5 flex-1">
+                      {featured.excerpt}
+                    </p>
                   </div>
-                  <h3 className="text-base lg:text-xl font-semibold text-white leading-snug mb-4 tracking-[-1px]">
-                    {blog.title}
-                  </h3>
-                  <p className="text-[#FFFFFF]/80 text-sm font-normal leading-[26px] w-full line-clamp-3 flex-1 pt">
-                    {blog.excerpt}
-                  </p>
                   <div className="flex items-center justify-between mt-6">
                     <AuthorChip
-                      initials={blog.authorInitials}
-                      name={blog.author}
+                      initials={featured.authorInitials}
+                      name={featured.author}
                     />
                     <Link
-                      href={`/blog/${blog.id}`}
+                      href={`/blog/${featured.id}`}
                       className="read-link flex items-center gap-1.5 text-[12px] text-green"
                     >
                       Read Article <span>→</span>
                     </Link>
                   </div>
                 </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            </div>
+          </section>
         )}
 
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-1 md:gap2 mt-10 mb-5">
-            <button
-              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-              disabled={currentPage === 1}
-              className="page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  text-[#34D399]/50 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed  font-jetbrainsmono  text-xs md:base"
-            >
-              ←
-            </button>
+      {/* Blog List */}
+      <section className="py-10">
+        <div className="max-w-326.5 mx-auto px-4">
+          <div className="flex items-center justify-between">
+            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono  uppercase tracking-[1px] mb-4 w-full">
+              {search ? `Search Results` : `Latest Articles`}
+              <div className="flex-1 h-[1px] bg-green/20"></div>
+            </div>
+          </div>
 
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          {paginated.length === 0 ? (
+            <div className="text-center py-20 text-white/50">
+              <p className="text-4xl mb-4">∅</p>
+              <p className=" text-base uppercase tracking-widest">
+                No articles found
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+              {paginated.map((blog) => (
+                <article
+                  key={blog.id}
+                  className="blog-card p-0 flex flex-col group bg-[#0F172A]/60 border border-[#1E293B] rounded-xl overflow-hidden"
+                >
+                  <div className="overflow-hidden h-60 relative">
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 group-hover:scale-105 transform transition-transform"
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col flex-1 lg:mt-4">
+                    <div className="flex items-center justify-between gap-3 mb-6">
+                      <CategoryBadge category={blog.category} small />
+                      <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase">
+                        {blog.date}
+                      </span>
+                    </div>
+                    <h3 className="text-lg lg:text-xl font-semibold text-white leading-snug mb-4 tracking-[-1px]">
+                      {blog.title}
+                    </h3>
+                    <p className="text-[#FFFFFF]/80 text-sm font-normal leading-[26px] w-full line-clamp-3 flex-1 pt">
+                      {blog.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between mt-6">
+                      <AuthorChip
+                        initials={blog.authorInitials}
+                        name={blog.author}
+                      />
+                      <Link
+                        href={`/blog/${blog.id}`}
+                        className="read-link flex items-center gap-1.5 text-[12px] text-green"
+                      >
+                        Read Article <span>→</span>
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-1 md:gap2 mt-10 mb-5">
               <button
-                key={page}
-                onClick={() => setCurrentPage(page)}
-                className={`page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  font-jetbrainsmono  text-xs md:base text-[#34D399]/50 cursor-pointer ${currentPage === page ? "page-active bg-[#0C2E30] text-green border-green" : ""}`}
+                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  text-[#34D399]/50 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed  font-jetbrainsmono  text-xs md:base"
               >
-                {page}
+                ←
               </button>
-            ))}
 
-            <button
-              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-              disabled={currentPage === totalPages}
-              className="page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  text-[#34D399]/50 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed font-jetbrainsmono  text-xs md:base"
-            >
-              →
-            </button>
-          </div>
-        )}
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (page) => (
+                  <button
+                    key={page}
+                    onClick={() => setCurrentPage(page)}
+                    className={`page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  font-jetbrainsmono  text-xs md:base text-[#34D399]/50 cursor-pointer ${currentPage === page ? "page-active bg-[#0C2E30] text-green border-green" : ""}`}
+                  >
+                    {page}
+                  </button>
+                ),
+              )}
+
+              <button
+                onClick={() =>
+                  setCurrentPage((p) => Math.min(totalPages, p + 1))
+                }
+                disabled={currentPage === totalPages}
+                className="page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  text-[#34D399]/50 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed font-jetbrainsmono  text-xs md:base"
+              >
+                →
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
