@@ -127,7 +127,7 @@ const Page = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> 
 
             <div className="w-full flex flex-col gap-5 md:gap-7  bg-[#0F172A]/60 border border-[#00E5A0]/20 rounded-2xl px-4 md:px-8 py-8">
               <ContactForm />

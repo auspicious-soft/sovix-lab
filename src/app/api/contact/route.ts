@@ -15,10 +15,10 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: "info@auspicioussoft.com",
       to: "info@auspicioussoft.com",
-      subject: "New Contact Form Submission",
+      subject: "Sovix Labs Form Submission",  
       html: `
-        <h2>New Contact Request</h2>
-        <p><b>Name:</b> ${data.name} ${data.surname}</p>
+        <h2>New Contact Request</h2> 
+        <p><b>Name:</b> ${data.name} ${data.surname}</p>  
         <p><b>Email:</b> ${data.email}</p>
         <p><b>Company:</b> ${data.company}</p>
         <p><b>Interest:</b> ${data.interest}</p>
