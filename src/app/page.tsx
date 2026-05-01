@@ -85,7 +85,7 @@ export default function Home() {
             </div>
             <div className="">
               <div className="banner-graph relative max-w-[452px] w-full m-auto lg:ml-auto mb-3.5">
-                <Image src={BannerGraph} alt="BannerGraph" />
+                <Image src={BannerGraph} alt="BannerGraph" priority/>
               </div>
               <div className="relative max-w-[452px] w-full m-auto lg:ml-auto flex gap-1.5 flex-wrap">
                 <div className="px-[11.01px] py-[7.34px] bg-slate-900/60 rounded-md outline outline-[0.92px] outline-offset-[-0.92px] outline-slate-800 justify-center text-[#c1cad8] text-[11px] font-normal font-jetbrainsmono uppercase leading-[14.46px] tracking-[0.92px]">

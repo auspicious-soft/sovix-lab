@@ -45,7 +45,7 @@ const Header = () => {
 
         {/* Button (Desktop) */} 
         <div className="hidden md:block">
-          <Button href=""></Button>
+          <Button></Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -94,7 +94,7 @@ const Header = () => {
 
           {/* Mobile Button */}
           <div className="pt-2">
-            <Button href="" className="justify-center"></Button>
+            <Button className="justify-center"></Button>
           </div>
         </div>
       )}

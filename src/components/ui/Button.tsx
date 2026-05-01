@@ -10,7 +10,7 @@ type ButtonProps = {
 };
 
 export default function Button({
-  href = "/about",
+  href = "/contact",
   children = "Book a Demo",
   className = "",
 }: ButtonProps) {
