@@ -17,7 +17,7 @@ const Header = () => {
     }`;
 
   return (
-    <header className="w-full border-b border-[#1E293B] bg-background top-0 z-50 py-3.5">
+    <header className="w-full border-b border-[#1E293B] bg-background top-0 z-[999] py-3.5">
       <div className="max-w-326.5 mx-auto px-4 flex items-center justify-between ">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">

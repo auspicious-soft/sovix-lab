@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, ChangeEvent } from "react";
 import JournalText from "@/assets/images/journal-text.svg";
 import Image from "next/image";
+import { ALL_BLOGS } from "@/data/blogData";
 
 const CATEGORIES = [
   "All",
@@ -14,163 +15,9 @@ const CATEGORIES = [
   "Industry",
 ];
 
-const ALL_BLOGS = [
-  {
-    id: 1,
-    category: "Research",
-    date: "Apr 14, 2025",
-    title: "Why RAG fails in insurance — and what we built instead.",
-    excerpt:
-      "Retrieval-augmented generation works beautifully for general knowledge. It breaks in subtle, expensive ways when applied to insurance documents — cross-policy reasoning, dated endorsements, and conflicting clauses across a submission stack.",
-    author: "Dr. James Okoro",
-    authorInitials: "JO",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=800&q=80",
-  },
-  {
-    id: 2,
-    category: "Engineering",
-    date: "Apr 10, 2025",
-    title: "How we built a zero-trust inference pipeline for HIPAA workloads.",
-    excerpt:
-      "Deploying LLMs in regulated environments requires rethinking every assumption about logging, data residency, and model access patterns. Here's our architecture.",
-    author: "Priya Nair",
-    authorInitials: "PN",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-  },
-  {
-    id: 3,
-    category: "Compliance",
-    date: "Apr 8, 2025",
-    title: "Mapping AI outputs to SOC 2 Type II controls — a practical guide.",
-    excerpt:
-      "Auditors are asking about AI now. Most compliance frameworks weren't written with generative models in mind. We mapped every output to existing controls and found the gaps.",
-    author: "Marcus Webb",
-    authorInitials: "MW",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-  },
-  {
-    id: 4,
-    category: "Product",
-    date: "Apr 5, 2025",
-    title:
-      "From prototype to production: lessons from 18 months of AI-assisted underwriting.",
-    excerpt:
-      "We shipped fast, broke things, and learned what matters. Here's an honest retrospective on the UX and technical decisions that aged well — and those that didn't.",
-    author: "Sofia Reyes",
-    authorInitials: "SR",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-  },
-  {
-    id: 5,
-    category: "Industry",
-    date: "Apr 2, 2025",
-    title: "The quiet standardization of private AI in financial services.",
-    excerpt:
-      "Without a formal standard, the industry is converging on de-facto patterns for model governance, data handling, and explainability. Here's what we're seeing across the sector.",
-    author: "Dr. James Okoro",
-    authorInitials: "JO",
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
-  },
-  {
-    id: 6,
-    category: "Research",
-    date: "Mar 28, 2025",
-    title:
-      "Embedding drift in long-tail insurance vocabularies: a six-month study.",
-    excerpt:
-      "General-purpose embedding models degrade on niche terminology. We tracked cosine drift across six months of real policy language and share our mitigation playbook.",
-    author: "Lena Hofmann",
-    authorInitials: "LH",
-    image:
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80",
-  },
-  {
-    id: 7,
-    category: "Engineering",
-    date: "Mar 22, 2025",
-    title:
-      "Prompt caching at scale: infrastructure patterns that actually save money.",
-    excerpt:
-      "Caching isn't just a performance trick — it's a cost architecture decision. We share the patterns that cut our inference spend by 40% without sacrificing freshness.",
-    author: "Tariq Hassan",
-    authorInitials: "TH",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-  },
-  {
-    id: 8,
-    category: "Compliance",
-    date: "Mar 18, 2025",
-    title:
-      "Audit trails for AI decisions: what regulators actually want to see.",
-    excerpt:
-      "We sat in on three different regulatory reviews and took notes. The documentation expectations are surprisingly specific — and almost nobody is meeting them.",
-    author: "Marcus Webb",
-    authorInitials: "MW",
-    image:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
-  },
-  {
-    id: 9,
-    category: "Product",
-    date: "Mar 14, 2025",
-    title: "Designing AI confidence scores that underwriters actually trust.",
-    excerpt:
-      "Showing a percentage means nothing if users don't understand its basis. We ran eight rounds of user testing to find the language and visual design that changed behavior.",
-    author: "Sofia Reyes",
-    authorInitials: "SR",
-    image:
-      "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&q=80",
-  },
-  {
-    id: 10,
-    category: "Industry",
-    date: "Mar 10, 2025",
-    title: "Why the best insurance AI teams are hiring philosophers.",
-    excerpt:
-      "The hardest problems in regulated AI aren't technical. We've started hiring for reasoning under uncertainty — and it's changing how our whole team thinks.",
-    author: "Dr. James Okoro",
-    authorInitials: "JO",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-  },
-  {
-    id: 11,
-    category: "Research",
-    date: "Mar 6, 2025",
-    title:
-      "Fine-tuning versus retrieval: the real performance numbers on claims data.",
-    excerpt:
-      "Everyone has opinions. We ran the benchmarks. Fine-tuned models outperform RAG on structured claims but lose on edge-case policy interpretation. The nuances matter.",
-    author: "Lena Hofmann",
-    authorInitials: "LH",
-    image:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
-  },
-  {
-    id: 12,
-    category: "Engineering",
-    date: "Mar 1, 2025",
-    title:
-      "Building observable LLM pipelines: what OpenTelemetry doesn't cover.",
-    excerpt:
-      "Standard observability tooling wasn't built for probabilistic outputs. We extended our stack with custom spans and a token-budget alerting system worth stealing.",
-    author: "Tariq Hassan",
-    authorInitials: "TH",
-    image:
-      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
-  },
-];
-
 const ITEMS_PER_PAGE = 6;
 
-const categoryColors = {
+const categoryColors: Record<string, string> = {
   Research: "bg-[#0C2E30] text-green border-green border ",
   Engineering: "bg-blue-500/20 text-blue-400 border border-blue-500/30",
   Compliance: "bg-amber-500/20 text-amber-400 border border-amber-500/30",
@@ -186,7 +33,7 @@ function CategoryBadge({
   small?: boolean;
 }) {
   const color =
-    categoryColors[category as keyof typeof categoryColors] ||
+    categoryColors[category] ||
     "bg-slate-500/20 text-slate-400 border border-slate-500/30 ";
   return (
     <span
@@ -204,7 +51,7 @@ function AuthorChip({ initials, name }: { initials: string; name: string }) {
         {initials}
       </div>
       <span className="text-[12px] uppercase tracking-[1px] text-green font-jetbrainsmono  ">
-        {name}
+        {name} 
       </span>
     </div>
   );
@@ -312,7 +159,7 @@ export default function BlogCard() {
                 <button
                   onClick={() => handleCategory(cat)}
                   className={` text-xs lg:text-base px-4 py-4 whitespace-nowrap transition-colors border-b border-b-2 cursor-pointer hover:text-white  ${
-                    activeCategory === cat 
+                    activeCategory === cat
                       ? "text-white border-green"
                         : " text-white/50 border-transparent"
                   }`}
