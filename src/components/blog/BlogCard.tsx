@@ -190,7 +190,7 @@ function CategoryBadge({
     "bg-slate-500/20 text-slate-400 border border-slate-500/30 ";
   return (
     <span
-      className={`inline-block rounded-sm uppercase tracking-widest ${small ? "text-[9px] px-4 py-1.5 tracking-[1px] font-normal font-jetbrainsmono" : "text-[10px] px-2.5 py-1"} ${color}`}
+      className={`inline-block rounded-sm uppercase tracking-widest ${small ? "text-[12px] px-2.5 py-1 font-jetbrainsmono " : "text-[12px] px-2.5 py-1 font-jetbrainsmono "} ${color}`}
     >
       {category}
     </span>
@@ -200,10 +200,10 @@ function CategoryBadge({
 function AuthorChip({ initials, name }: { initials: string; name: string }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="w-10 h-10 rounded-full bg-[#0C2E30] text-green border-green border flex items-center tracking-[1px] justify-center text-base font-bold  shrink-0 font-jetbrainsmono">
+      <div className="w-10 h-10 rounded-full bg-[#0C2E30] text-green border-green border flex items-center tracking-[1px] justify-center text-base font-bold  shrink-0 font-jetbrainsmono ">
         {initials}
       </div>
-      <span className="text-[9px] uppercase tracking-[1px] text-green font-jetbrainsmono ">
+      <span className="text-[12px] uppercase tracking-[1px] text-green font-jetbrainsmono  ">
         {name}
       </span>
     </div>
@@ -244,14 +244,14 @@ export default function BlogCard() {
 
   return (
     <>
-      <section className="py-12 md:py-[100px] flex flex-col w-full relative z-[1] grid-border relative z-1">
+      <section className="py-12 md:py-[100px] flex flex-col w-full relative z-[1] grid-border">
         <div className="max-w-326.5 mx-auto px-4 flex items-center justify-between w-full">
           <div className="w-full grid items-center grid-cols-1 lg:grid-cols-[1.8fr_1fr] gap-10 lg:px-14">
             <div className="flex flex-col gap-4 md:gap-6 justify-start items-center lg:items-start ">
               <div className="inline-flex justify-start items-center gap-3">
                 <div className="flex justify-start items-center gap-3">
                   <div className="w-8 h-px bg-gradient-to-r from-emerald-500/60 from 33% to-emerald-500/0" />
-                  <div className="text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
+                  <div className="text-green text-xs font-normal font-jetbrainsmono  uppercase tracking-[1px]">
                     Sovix Labs Journal
                   </div>
                 </div>
@@ -273,7 +273,7 @@ export default function BlogCard() {
                 <div className="opacity-20 justify-end text-[#30cc94] font-bold text-[70px] leading-[30px] md:text-[100px] md:leading-[70px]">
                   {ALL_BLOGS.length}
                 </div>
-                <span className="text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
+                <span className="text-green text-xs font-normal font-jetbrainsmono  uppercase tracking-[1px]">
                   Articles Published
                 </span>
               </div>
@@ -311,7 +311,7 @@ export default function BlogCard() {
               <div key={cat} className="flex items-center gap-2 lg:gap-5">
                 <button
                   onClick={() => handleCategory(cat)}
-                  className={`mono text-xs lg:text-base px-4 py-4 whitespace-nowrap transition-colors border-b border-b-2 cursor-pointer hover:text-white  ${
+                  className={` text-xs lg:text-base px-4 py-4 whitespace-nowrap transition-colors border-b border-b-2 cursor-pointer hover:text-white  ${
                     activeCategory === cat 
                       ? "text-white border-green"
                         : " text-white/50 border-transparent"
@@ -340,13 +340,13 @@ export default function BlogCard() {
       {featured &&
         (activeCategory === "All" || activeCategory === featured.category) &&
         search === "" && (
-          <section className="pt-[40px] md:pt-[60px]">
+          <section className="pt-[40px] md:pt-[60px] ">
             <div className="max-w-326.5 mx-auto px-4">
-            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px] mb-4">
+            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono  uppercase tracking-[1px] mb-4">
               Featured Article
               <div className="flex-1 h-[1px] bg-green/20"></div>
             </div>
-            <div className="featured-card bg-[#0F172A]/60 border border-[#1E293B] p-4 md:p-5 rounded-xl overflow-hidden gap-4 grid md:grid-cols-2">
+            <div className="featured-card bg-[#0F172A]/60 border border-[#1E293B] p-4 md:p-5 rounded-xl overflow-hidden items-center gap-4 grid md:grid-cols-2">
               <div className="overflow-hidden">
                 <img
                   src={featured.image}
@@ -354,97 +354,96 @@ export default function BlogCard() {
                   className="w-full aspect-[1/0.7] object-cover rounded-xl"
                 />
               </div>
-              <div className="lg:p-8 flex flex-col justify-between">
+              <div className="lg:p-8 flex flex-col">
                 <div>
-                  <div className="flex items-center gap-6 mb-5">
+                  <div className="flex items-center gap-6 mb-6">
                     <CategoryBadge category={featured.category} />
-                    <span className="text-white/40 text-[9px] tracking-[1px] font-normal font-jetbrainsmono uppercase">
+                    <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase">
                       {featured.date}
                     </span>
-                    <span className="text-white/40 text-[9px] tracking-[1px] font-normal font-jetbrainsmono uppercase ml-auto">
+                    <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase ml-auto">
                       Featured
                     </span>
                   </div>
-                  <h2 className="text-xl md:text-2xl font-semibold text-slate-100 leading-snug mb-4">
+                  <h2 className="text-xl md:text-2xl font-semibold text-white leading-snug mb-4">
                     {featured.title}
                   </h2>
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-[#FFFFFF]/80 text-sm md:text-base font-normal leading-[26px] w-full line-clamp-5 flex-1">  
                     {featured.excerpt}
                   </p>
                 </div>
-                <div className="flex items-center justify-between mt-8 pt-5 border-t border-[#0f2d32]">
+                <div className="flex items-center justify-between mt-6">
                   <AuthorChip
                     initials={featured.authorInitials}
                     name={featured.author}
                   />
                   <Link
                     href={`/blog/${featured.id}`}
-                    className="read-link flex items-center gap-1.5 text-xs mono uppercase tracking-widest font-medium"
+                    className="read-link flex items-center gap-1.5 text-[12px] text-green"
                   >
                     Read Article <span>→</span>
                   </Link>
                 </div>
               </div>
             </div>
-            </div> 
+            </div>  
           </section>
         )}
 
       {/* Blog List */}
       <section className="py-10">
        <div className="max-w-326.5 mx-auto px-4">
-        <div className="flex items-center justify-between mb-5">
-            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono uppercase tracking-[1px] mb-4 w-full">
+        <div className="flex items-center justify-between">
+            <div className="flex gap-2 items-center text-green text-xs font-normal font-jetbrainsmono  uppercase tracking-[1px] mb-4 w-full">
                {search ? `Search Results` : `Latest Articles`}
               <div className="flex-1 h-[1px] bg-green/20"></div>
             </div>
         </div>
 
         {paginated.length === 0 ? (
-          <div className="text-center py-20 text-slate-600">
+          <div className="text-center py-20 text-white/50">
             <p className="text-4xl mb-4">∅</p>
-            <p className="mono text-xs uppercase tracking-widest">
+            <p className=" text-base uppercase tracking-widest">
               No articles found
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#0a1a1d]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {paginated.map((blog) => (
               <article
                 key={blog.id}
-                className="blog-card p-0 flex flex-col group"
+                className="blog-card p-0 flex flex-col group bg-[#0F172A]/60 border border-[#1E293B] rounded-xl overflow-hidden"
               >
-                <div className="overflow-hidden h-44 relative">
+                <div className="overflow-hidden h-60 relative">
                   <img
                     src={blog.image}
                     alt={blog.title}
                     className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 group-hover:scale-105 transform transition-transform"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1618] via-transparent to-transparent" />
                 </div>
-                <div className="p-5 flex flex-col flex-1">
-                  <div className="flex items-center gap-3 mb-3">
+                <div className="p-4 flex flex-col flex-1 lg:mt-4">
+                  <div className="flex items-center justify-between gap-3 mb-6">
                     <CategoryBadge category={blog.category} small />
-                    <span className="text-white/40 text-[9px] tracking-[1px] font-normal font-jetbrainsmono uppercase">
+                    <span className="text-white/40 text-[12px] tracking-[1px] font-normal font-jetbrainsmono  uppercase">
                       {blog.date}
                     </span>
                   </div>
-                  <h3 className="text-sm font-semibold text-slate-100 leading-snug mb-3 group-hover:text-emerald-300 transition-colors">
+                  <h3 className="text-base lg:text-xl font-semibold text-white leading-snug mb-4 tracking-[-1px]">
                     {blog.title}
                   </h3>
-                  <p className="text-xs text-slate-500 leading-relaxed line-clamp-3 flex-1">
+                  <p className="text-[#FFFFFF]/80 text-sm font-normal leading-[26px] w-full line-clamp-3 flex-1 pt">
                     {blog.excerpt}
                   </p>
-                  <div className="flex items-center justify-between mt-5 pt-4 border-t border-[#0f2428]">
+                  <div className="flex items-center justify-between mt-6">
                     <AuthorChip
                       initials={blog.authorInitials}
                       name={blog.author}
                     />
                     <Link
                       href={`/blog/${blog.id}`}
-                      className="read-link flex items-center gap-1 text-[10px] mono uppercase tracking-widest font-medium"
+                      className="read-link flex items-center gap-1.5 text-[12px] text-green"
                     >
-                      Read <span>→</span>
+                      Read Article <span>→</span>
                     </Link>
                   </div>
                 </div>
@@ -455,11 +454,11 @@ export default function BlogCard() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-1 mt-10">
+          <div className="flex items-center justify-center gap-1 md:gap2 mt-10 mb-5">
             <button
               onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="page-btn w-9 h-9 flex items-center justify-center rounded-sm border border-[#0f2d32] text-slate-500 disabled:opacity-30 disabled:cursor-not-allowed mono text-xs"
+              className="page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  text-[#34D399]/50 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed  font-jetbrainsmono  text-xs md:base"
             >
               ←
             </button>
@@ -468,7 +467,7 @@ export default function BlogCard() {
               <button
                 key={page}
                 onClick={() => setCurrentPage(page)}
-                className={`page-btn w-9 h-9 flex items-center justify-center rounded-sm border border-[#0f2d32] mono text-xs text-slate-400 ${currentPage === page ? "page-active border-emerald-500" : ""}`}
+                className={`page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  font-jetbrainsmono  text-xs md:base text-[#34D399]/50 cursor-pointer ${currentPage === page ? "page-active bg-[#0C2E30] text-green border-green" : ""}`}
               >
                 {page}
               </button>
@@ -477,7 +476,7 @@ export default function BlogCard() {
             <button
               onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="page-btn w-9 h-9 flex items-center justify-center rounded-sm border border-[#0f2d32] text-slate-500 disabled:opacity-30 disabled:cursor-not-allowed mono text-xs"
+              className="page-btn w-10 h-10 flex items-center justify-center rounded-full bg-[#0C2E30]/50 border border-[#30CC94]/50  text-[#34D399]/50 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed font-jetbrainsmono  text-xs md:base"
             >
               →
             </button>

@@ -605,6 +605,7 @@ const Page = () => {
                 src={ComplianceLegalTeams}
                 alt="Comp lianceLegal Teams"
                 className="rounded-[20px]"
+                priority
               />
               <div className="flex flex-col gap-4">
                 <span className="justify-center text-[#34D399] text-[10px] md:text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
