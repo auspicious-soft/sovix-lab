@@ -58,8 +58,13 @@ export default function SingleBlogPage({ params }: Props) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (sections.length > 0) setActiveId(sections[0].id);
-  }, [blogId, sections]);
+    if (sections.length === 0) return;
+
+    const isActiveIdValid = sections.some((section) => section.id === activeId);
+    if (!isActiveIdValid) {
+      setActiveId(sections[0].id);
+    }
+  }, [activeId, sections]);
 
   useEffect(() => {
     const handleScroll = () => {
