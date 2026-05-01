@@ -31,7 +31,7 @@ export const ALL_BLOGS: Blog[] = [
       "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=800&q=80",
     blogContent: `
     <div class="flex flex-col blog-content">
-    h2>Why RAG fails in insurance — and what we built instead.</h2>
+    <h2>Why RAG fails in insurance — and what we built instead.</h2>
     <p>
       Retrieval-augmented generation is one of the most useful architectural patterns to emerge from the LLM era. The idea is straightforward: rather than relying solely on a model's parametric knowledge, you retrieve relevant documents at inference time and condition the model's response on them. It works well for customer support, knowledge bases, internal wikis.
     </p> <p>It does not work well for insurance — at least not without significant modification. We learned this the hard way. When we built the first version of Sovix's document intelligence layer in 2022, we started with a standard RAG pipeline. It failed in production within three weeks. Not catastrophically — the outputs looked plausible. That was the problem. Plausible but wrong is worse than obviously broken.
