@@ -10,6 +10,7 @@ export interface Blog {
   authorBio?: string;
   featured?: boolean;
   image: string; 
+  blogContent: string;
 }
 
 export const ALL_BLOGS: Blog[] = [
@@ -27,6 +28,22 @@ export const ALL_BLOGS: Blog[] = [
       "NLP researcher from Cambridge. Published work on document reasoning in low-resource domains. Leads all model research inside Sovix.",
     featured: true,
     image: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=800&q=80",
+    blogContent:`
+          <div class="flex flex-col blog-content">
+            <h2>Why RAG fails in insurance — and what we built instead.</h2>
+    <p>
+      Retrieval-augmented generation is one of the most useful architectural patterns to emerge from the LLM era. The idea is straightforward: rather than relying solely on a model's parametric knowledge, you retrieve relevant documents at inference time and condition the model's response on them. It works well for customer support, knowledge bases, internal wikis.
+    </p> <p>It does not work well for insurance — at least not without significant modification. We learned this the hard way. When we built the first version of Sovix's document intelligence layer in 2022, we started with a standard RAG pipeline. It failed in production within three weeks. Not catastrophically — the outputs looked plausible. That was the problem. Plausible but wrong is worse than obviously broken.
+    </p>
+          </div> 
+                    <div class="flex flex-col blog-content">
+            <h2>Why RAG fails in insurance — and what we built instead.</h2>
+    <p>
+      Retrieval-augmented generation is one of the most useful architectural patterns to emerge from the LLM era. The idea is straightforward: rather than relying solely on a model's parametric knowledge, you retrieve relevant documents at inference time and condition the model's response on them. It works well for customer support, knowledge bases, internal wikis.
+    </p> <p>It does not work well for insurance — at least not without significant modification. We learned this the hard way. When we built the first version of Sovix's document intelligence layer in 2022, we started with a standard RAG pipeline. It failed in production within three weeks. Not catastrophically — the outputs looked plausible. That was the problem. Plausible but wrong is worse than obviously broken.
+    </p>
+          </div> 
+        `,
   },
   {
     id: 2,
@@ -41,6 +58,7 @@ export const ALL_BLOGS: Blog[] = [
     authorBio: "Infrastructure engineer specialising in secure cloud deployments. Previously at AWS and Cloudflare.",
     featured: true,
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 3,
@@ -54,6 +72,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Compliance Lead",
     authorBio: "Former Big-4 auditor. Spends his days translating AI behaviour into language regulators understand.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 4,
@@ -67,6 +86,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Product Manager",
     authorBio: "Product lead for Sovix's underwriting suite. Obsessed with the gap between what users say and what they do.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 5,
@@ -80,6 +100,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Chief Scientist",
     authorBio: "NLP researcher from Cambridge. Published work on document reasoning in low-resource domains. Leads all model research inside Sovix.",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 6,
@@ -93,6 +114,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Research Engineer",
     authorBio: "Specialises in embedding models and semantic search. Joined Sovix from a computational linguistics PhD.",
     image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 7,
@@ -106,6 +128,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Platform Engineer",
     authorBio: "Builds the pipes that LLMs flow through. Passionate about cost-efficient infrastructure at scale.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 8,
@@ -119,6 +142,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Compliance Lead",
     authorBio: "Former Big-4 auditor. Spends his days translating AI behaviour into language regulators understand.",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 9,
@@ -132,6 +156,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Product Manager",
     authorBio: "Product lead for Sovix's underwriting suite. Obsessed with the gap between what users say and what they do.",
     image: "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 10,
@@ -145,6 +170,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Chief Scientist",
     authorBio: "NLP researcher from Cambridge. Published work on document reasoning in low-resource domains. Leads all model research inside Sovix.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 11,
@@ -158,6 +184,7 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Research Engineer",
     authorBio: "Specialises in embedding models and semantic search. Joined Sovix from a computational linguistics PhD.",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
+        blogContent:"",
   },
   {
     id: 12,
@@ -171,6 +198,15 @@ export const ALL_BLOGS: Blog[] = [
     authorRole: "Platform Engineer",
     authorBio: "Builds the pipes that LLMs flow through. Passionate about cost-efficient infrastructure at scale.",
     image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+        blogContent: `
+          <div class="flex gap-4 flex-col blog-content">     
+            <h2>Why RAG Fails in Insurance</h2>
+            <p>
+            Retrieval-augmented generation (RAG) works well for general knowledge,
+            but insurance documents are far more complex.
+            </p>
+          </div> 
+        `,
   },
 ];
 

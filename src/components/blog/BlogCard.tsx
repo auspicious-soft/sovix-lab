@@ -47,7 +47,7 @@ function CategoryBadge({
 function AuthorChip({ initials, name }: { initials: string; name: string }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="w-10 h-10 rounded-full bg-[#0C2E30] text-green border-green border flex items-center tracking-[1px] justify-center text-base font-bold  shrink-0 font-jetbrainsmono ">
+      <div className="w-10 h-10 rounded-full bg-[#0C2E30] text-green border-green border flex items-center tracking-[1px] justify-center text-sm font-bold  shrink-0 font-jetbrainsmono ">
         {initials}
       </div>
       <span className="text-[12px] uppercase tracking-[1px] text-green font-jetbrainsmono  ">

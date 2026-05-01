@@ -228,6 +228,23 @@ body {
 .avobe-footer {
   backdrop-filter: blur(12px);
 }
+.blog-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    margin-bottom: 12px;
+}
+
+.blog-content p:last-child {
+    margin: 0;
+}
+.blog-content {
+    margin-bottom: 24px; 
+}
 
 @keyframes moveIn {
   from {
@@ -571,6 +588,12 @@ background-image: linear-gradient(rgb(48 204 148 / 8%) 1px, #0000 1px), linear-g
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  .blog-content h2 {
+    font-size: 20px;
+}
+.blog-content p {
+    font-size: 14px;
+}
   .grid-border:before {
     background-size: 104px 88px;
 }

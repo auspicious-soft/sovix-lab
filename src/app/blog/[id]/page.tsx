@@ -186,12 +186,14 @@ export default function SingleBlogPage({ params }: Props) {
           className="absolute right-0 top-1/2 -translate-y-1/2 pointer-none -z-1"
         />
       </section>
-
-      <div className="max-w-[1300px] mx-auto px-4 lg:px-14 py-10 md:py-16 flex gap-12 xl:gap-16 items-start">
+     <section className="py-10 md:py-[60px]">
+      <div className="max-w-326.5 mx-auto px-4 flex justify-between w-full gap-6 lg:gap-10">
         {/* LEFT: Article content — rendered entirely from blog.sections */}
-        <article ref={contentRef} className="flex-1 min-w-0">
-          {blog.date}
-        </article>
+         <article
+          ref={contentRef}
+          className="flex-1"
+          dangerouslySetInnerHTML={{ __html: blog.blogContent ?? "<p>Content coming soon.</p>" }}
+        />
 
         {/* RIGHT: Sticky sidebar */}
         <aside className="hidden lg:flex flex-col gap-5 w-[220px] xl:w-[240px] shrink-0 sticky top-20">
@@ -246,9 +248,9 @@ export default function SingleBlogPage({ params }: Props) {
                 </div>
               </div>
               {blog.authorBio && (
-                <p className="text-[#d9dbe0] text-sm font-normal">
+                <p className="text-[#d9dbe0] text-xs font-normal leading-5">
                   {blog.authorBio}
-                </p>
+                </p> 
               )}
             </div>
           </div>
@@ -269,7 +271,7 @@ export default function SingleBlogPage({ params }: Props) {
                     className="p-4 flex flex-col gap-2 hover:bg-white/5 transition-colors group items-start"
                   >
                     <CategoryBadge category={article.category} />
-                    <p className="text-white/50 text-sm font-normal group-hover:text-white transition-colors leading-5">
+                    <p className="text-white/50 text-xs font-normal group-hover:text-white transition-colors leading-5">
                       {article.title}
                     </p>
                     <p className="text-white/50 text-[10px] font-jetbrainsmono uppercase tracking-[1px]">
@@ -282,6 +284,7 @@ export default function SingleBlogPage({ params }: Props) {
           )}
         </aside>
       </div>
+      </section>
     </>
   );
 }
