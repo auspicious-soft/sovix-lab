@@ -59,7 +59,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-2 py-4 space-y-2 bg-[#0F172A] absolute top-[61px] w-full left-0 flex flex-col  ">
+        <div className="md:hidden px-2 py-4 space-y-2 bg-[#0F172A] absolute top-[74px] w-full left-0 flex flex-col  ">
           <Link
             href="/solutions"
             className={linkClass("/solutions")}
