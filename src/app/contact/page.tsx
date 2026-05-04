@@ -74,9 +74,9 @@ const Page = () => {
                     </div>
                     <a
                       className="text-[#FFFFFF] text-sm md:text-base font-semibold"
-                      href="mailto:sales@aegis.ai"
+                      href="mailto:info@auspicioussoft.com"
                     >
-                      sales@aegis.ai
+                      info@auspicioussoft.com
                     </a>
                   </div>
                 </div>
@@ -87,10 +87,10 @@ const Page = () => {
                       ENTERPRISE DESK
                     </div>
                     <a
-                      href="tel:+14784587896"
+                      href="tel:+91 70189 46603 "
                       className="text-[#FFFFFF] text-sm md:text-base font-semibold"
                     >
-                      +1 478 458 7896
+                      +91 70189 46603 
                     </a>
                   </div>
                 </div>
@@ -100,9 +100,8 @@ const Page = () => {
                     <div className="text-[#C1CAD8] text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
                       Our Location
                     </div>
-                    <p className="text-[#FFFFFF] text-sm md:text-base font-semibold max-w-[200px] w-full">
-                      535 Mission St, 14th Floor
-                      <br /> San Francisco, CA 94105
+                    <p className="text-[#FFFFFF] text-sm md:text-base font-semibold max-w-[310px] w-full">
+                     Flexi Tower Plot Number E-288 1st Floor, Sector 75, Sahibzada Ajit Singh Nagar, Punjab 160075
                     </p>
                   </div>
                 </div>
@@ -111,7 +110,7 @@ const Page = () => {
                 <div className="flex flex-col gap-1">
                   <a
                     className="text-[#C1CAD8] text-sm md:text-base font-semibold flex gap-1 items-center"
-                    href="https://www.linkedin.com/"
+                    href="https://in.linkedin.com/company/auspicioussoft"
                     target="_blank"
                   >
                     LINKEDIN <SocialIcon />
@@ -120,7 +119,7 @@ const Page = () => {
                 <div className="flex flex-col gap-1">
                   <a
                     className="text-[#C1CAD8] text-sm md:text-base font-semibold flex  gap-1 items-center"
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/auspicious.team/"
                     target="_blank"
                   >
                     INSTAGRAM <SocialIcon />

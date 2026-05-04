@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="w-full border-t border-[#0F172A] bg-[#000000] ">
       <div className="max-w-326.5 mx-auto px-4 flex items-center justify-between w-full flex-col">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1fr_1fr_1fr] gap-8 lg:gap-16 py-[60px]" >
+        <div className="grid grid-cols-1 md:grid-cols-[2.4fr_1fr_1fr_1fr] gap-8 lg:gap-16 py-[60px]">
           {/* Left Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -43,7 +43,9 @@ const Footer = () => {
 
           {/* Product */}
           <div className="space-y-2 md:space-y-5">
-            <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">Product</h4>
+            <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">
+              Product
+            </h4>
             <ul className="space-y-2 md:space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
               <li>
                 <Link href="/solutions">Solutions</Link>
@@ -59,7 +61,9 @@ const Footer = () => {
 
           {/* Company */}
           <div className="space-y-3 md:space-y-5">
-             <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">Company</h4>
+            <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">
+              Company
+            </h4>
             <ul className="space-y-2 md:space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
               <li>
                 <Link href="/contact">Contact</Link>
@@ -75,17 +79,33 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-5">
-            <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">More Information</h4>
+            <h4 className="text-[#64748B] text-xs font-semibold uppercase leading-4 tracking-[1.3px]">
+              More Information
+            </h4>
             <div className="space-y-3 md:space-y-5 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
-              <p className="flex items-center gap-2"> <CallIcon /> +1 458 745 9658</p>
-              <p className="flex items-center gap-2"> <Emailcon /> hello@sovixlabs.com</p>
+              <a
+                href="tel:+91 70189 46603 "
+                className="flex items-center gap-2"
+              >
+                <CallIcon />
+                +91 70189 46603
+              </a>
+              <a
+                href="mailto:info@auspicioussoft.com"
+                className="flex items-center gap-2"
+              >
+                <Emailcon />
+                info@auspicioussoft.com
+              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-[#0F172A] flex flex-col md:flex-row justify-between items-center gap-4 py-5 w-full">
-          <p className="text-[#64748B] text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">© 2026 Sovix Labs • All rights reserved.</p>
+          <p className="text-[#64748B] text-xs font-normal font-jetbrainsmono uppercase tracking-[1px]">
+            © 2026 Sovix Labs • All rights reserved.
+          </p>
 
           <div className="flex gap-6 lg:gap-12 [&_a]:text-[#C1CAD8] [&_a]:text-sm lg:[&_a]:text-sm md:text-base">
             <Link href="#">Privacy Policy</Link>
