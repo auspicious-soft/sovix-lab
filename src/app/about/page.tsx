@@ -11,6 +11,14 @@ import {
 } from "@/assets/svgicons";
 import TeamSection from "@/components/about/TeamSection";
 import FooterSection from "@/components/ui/FooterSection";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Sovix Labs — Private AI for Regulated Insurance Teams",
+  description: "Sovix Labs builds private AI for regulated insurers. Founded by underwriters & AWS engineers. 12 carrier deployments. Zero bytes of client data ever egressed.",
+};
+
 const cards = [
   { year: "2021", text: "Founded in San Fransisco" },
   { year: "47", text: "People across 4 time zones" },

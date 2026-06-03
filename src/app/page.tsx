@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import BannerGraph from "@/assets/images/banner-graph.svg";
 import SovixCore from "@/assets/images/sovix-core.svg";
@@ -23,6 +24,11 @@ import {
 import StepsSection from "@/components/home/StepsSection";
 import SurfacesCard from "@/components/home/SurfacesCard";
 import CardBox from "@/components/ui/CardBox";
+
+export const metadata: Metadata = {
+  title: "Private AI for Insurance Underwriting | Sovix Labs",
+  description: "Private AI platform for insurance underwriting & risk teams. Zero data egress. SOC 2 certified. Deployed inside your AWS, Azure or on-prem in 30 days.",
+};
 
 export default function Home() {
   return (

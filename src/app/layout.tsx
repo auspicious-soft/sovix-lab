@@ -5,7 +5,6 @@ import Footer from "@/components/layout/Footer";
 import { JetBrains_Mono } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Sovix Lab",
    icons: {
     icon: "/favicon.svg",
   },

@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from "next";
 import Button from "@/components/ui/Button";
 import SovixSoultionsBanner from "@/assets/images/sovix-solutions-graphic.svg";
 import Image from "next/image";
@@ -17,6 +18,11 @@ import {
 import Link from "next/link";
 import InspectionSlider from "../../components/solutions/InspectionSlider";
 import FooterSection from "@/components/ui/FooterSection";
+
+export const metadata: Metadata = {
+  title: "AI Underwriting Software — Deployed Inside Your Perimeter",
+  description: "Four AI surfaces for underwriting, claims & compliance — deployed inside your perimeter. No third-party APIs. Full audit trail. SOC 2 & ISO 27001 certified.",
+};
 
 const Page = () => {
   return (

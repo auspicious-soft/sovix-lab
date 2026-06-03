@@ -13,6 +13,13 @@ import Faq from "@/components/ui/Faq";
 import FooterSection from "@/components/ui/FooterSection";
 import React from "react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Sovix Labs — Book a Discovery Call",
+  description: "Book a 45-minute discovery call with a Sovix Labs solutions architect. Bring your hardest document. We bring the architecture & a signed mutual NDA.",
+};
+
 const Page = () => {
   return (
     <>
