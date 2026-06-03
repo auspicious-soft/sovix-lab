@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block system folders (If they exist)
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://sovixlabs.com/sitemap.xml
