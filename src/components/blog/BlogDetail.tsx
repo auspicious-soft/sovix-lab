@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { use, useEffect, useRef, useState, useMemo } from "react";
-import { getBlogById, getRelatedBlogs } from "@/data/blogData";
+import { getBlogBySlug, getRelatedBlogs } from "@/data/blogData";
 import JournalText from "@/assets/images/journal-text.svg";
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ function hasSections(blog: unknown): blog is { sections: BlogSection[] } {
     Array.isArray((blog as Record<string, unknown>).sections)
   );
 }
-
+ 
 const categoryColors: Record<string, string> = {
   Research: "bg-[#0C2E30] text-[#30CC94] border border-[#30CC94]",
   Engineering: "bg-blue-500/20 text-blue-400 border border-blue-500/30",
@@ -43,22 +43,16 @@ function CategoryBadge({ category }: { category: string }) {
 }
 
 interface Props {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }
 
-export default function SingleBlogPage({ params }: Props) {
-  const { id } = use(params);
-  const blogId = Number(id);
-
-  // ── Data from shared source ──────────────────────────────────────────────
-  const blog = getBlogById(blogId);
-  const relatedArticles = getRelatedBlogs(blogId, 3);
+export default function BlogDetail({ params }: Props) {
+const { slug } = use(params);
+const blog = getBlogBySlug(slug);
+const relatedArticles = getRelatedBlogs(blog?.id ?? 0, 3);
 
   // ── Derive sections list from blog data (for TOC) ────────────────────────
-  const sections = useMemo<BlogSection[]>(
-    () => (blog && hasSections(blog) ? blog.sections : []),
-    [blog],
-  );
+const sections: BlogSection[] = blog && hasSections(blog) ? blog.sections : [];
 
   const [activeId, setActiveId] = useState<string>(sections[0]?.id ?? "");
   const [readProgress, setReadProgress] = useState(0);
@@ -269,7 +263,7 @@ export default function SingleBlogPage({ params }: Props) {
                   {relatedArticles.map((article) => (
                     <Link
                       key={article.id}
-                      href={`/blog/${article.id}`}
+                      href={`/blog/${article.slug}`}
                       className="p-4 flex flex-col gap-2 hover:bg-white/5 transition-colors group items-start"
                     >
                       <CategoryBadge category={article.category} />

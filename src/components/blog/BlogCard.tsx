@@ -225,7 +225,7 @@ export default function BlogCard() {
                       name={featured.author}
                     />
                     <Link
-                      href={`/blog/${featured.id}`}
+                      href={`/blog/${featured.slug}`}
                       className="read-link flex items-center gap-1.5 text-[12px] text-green"
                     >
                       Read Article <span>→</span>
@@ -287,7 +287,7 @@ export default function BlogCard() {
                         name={blog.author}
                       />
                       <Link
-                        href={`/blog/${blog.id}`}
+                        href={`/blog/${blog.slug}`}
                         className="read-link flex items-center gap-1.5 text-[12px] text-green"
                       >
                         Read Article <span>→</span>
