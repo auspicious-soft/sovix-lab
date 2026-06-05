@@ -14,15 +14,45 @@ import FooterSection from "@/components/ui/FooterSection";
 import React from "react";
 
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Contact Sovix Labs — Book a Discovery Call",
   description: "Book a 45-minute discovery call with a Sovix Labs solutions architect. Bring your hardest document. We bring the architecture & a signed mutual NDA.",
+ alternates: {
+    canonical: "https://sovixlabs.com/contact",
+  },
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sovixlabs.com/",
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://sovixlabs.com/contact",
+    },
+  ],
 };
 
 const Page = () => {
   return (
     <>
+          <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <section className="py-12 md:py-[80px] banner-inner flex flex-col w-full relative z-[1] bg-no-repeat bg-bottom bg-cover">
         <div className="max-w-326.5 mx-auto px-4 flex items-center justify-between w-full">
           <div className="w-full grid items-center grid-cols-1 gap-6 md:gap-10 lg:px-10">

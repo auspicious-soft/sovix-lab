@@ -13,10 +13,33 @@ import TeamSection from "@/components/about/TeamSection";
 import FooterSection from "@/components/ui/FooterSection";
 
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "About Sovix Labs — Private AI for Regulated Insurance Teams",
   description: "Sovix Labs builds private AI for regulated insurers. Founded by underwriters & AWS engineers. 12 carrier deployments. Zero bytes of client data ever egressed.",
+ alternates: {
+    canonical: "https://sovixlabs.com/about",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sovixlabs.com/",
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://sovixlabs.com/About",
+    },
+  ],
 };
 
 const cards = [
@@ -104,6 +127,13 @@ const features = [
 const Page = () => {
   return (
     <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <section className="py-12 md:py-[100px] flex flex-col w-full relative z-[1] grid-border relative z-1">
         <div className="max-w-326.5 mx-auto px-4 flex items-center justify-between w-full">
           <div className="w-full grid items-center grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:px-14">

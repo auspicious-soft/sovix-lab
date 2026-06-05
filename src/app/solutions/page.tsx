@@ -36,7 +36,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://sovixlabs.com/"
+      "item": "https://sovixlabs.com/",
     },
     {
       "@type": "ListItem",
@@ -50,7 +50,7 @@ const breadcrumbSchema = {
 const Page = () => {
   return (
     <>
-          <Script
+        <Script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{

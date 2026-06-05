@@ -28,6 +28,9 @@ import CardBox from "@/components/ui/CardBox";
 export const metadata: Metadata = {
   title: "Private AI for Insurance Underwriting | Sovix Labs",
   description: "Private AI platform for insurance underwriting & risk teams. Zero data egress. SOC 2 certified. Deployed inside your AWS, Azure or on-prem in 30 days.",
+alternates: {
+    canonical: "https://sovixlabs.com", 
+  },
 };
 
 export default function Home() {
