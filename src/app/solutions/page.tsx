@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import Script from "next/script";
 import Button from "@/components/ui/Button";
 import SovixSoultionsBanner from "@/assets/images/sovix-solutions-graphic.svg";
 import Image from "next/image";
@@ -22,11 +23,40 @@ import FooterSection from "@/components/ui/FooterSection";
 export const metadata: Metadata = {
   title: "AI Underwriting Software — Deployed Inside Your Perimeter",
   description: "Four AI surfaces for underwriting, claims & compliance — deployed inside your perimeter. No third-party APIs. Full audit trail. SOC 2 & ISO 27001 certified.",
+ alternates: {
+    canonical: "https://sovixlabs.com/solutions",
+  },
+};
+
+const breadcrumbSchema = {
+ "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://sovixlabs.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions",
+      "item": "https://sovixlabs.com/solutions",
+    },
+  ],
 };
 
 const Page = () => {
   return (
     <>
+          <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <section className="py-10 md:py-[60px] banner-section flex flex-col w-full relative z-[1]">
         <div className="max-w-326.5 mx-auto px-4 flex items-center justify-between ">
           <div className="w-full grid items-center grid-cols-1 lg:grid-cols-[56.5%_43.5%] gap-6 md:gap-10 lg:px-10">
